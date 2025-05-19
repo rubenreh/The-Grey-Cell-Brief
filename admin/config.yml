@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/YOUR_REPO_NAME
+  repo: rubenreh/The-Grey-Cell-Brief
   branch: main
 
 media_folder: "images/uploads"
