@@ -12,19 +12,6 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
     <!-- Add Firestore -->
     <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
-    <script>
-      const firebaseConfig = {
-        apiKey: "AIzaSyCl4-CR0cDcInzgWnGJMPDHbBn6L1bWlRs",
-        authDomain: "grey-cell-brief.firebaseapp.com",
-        projectId: "grey-cell-brief",
-        storageBucket: "grey-cell-brief.firebasestorage.app",
-        messagingSenderId: "479300831529",
-        appId: "1:479300831529:web:b295eb7803433fa69acf38",
-        measurementId: "G-6GCYXKL6N0"
-      };
-      firebase.initializeApp(firebaseConfig);
-      const db = firebase.firestore();
-    </script>
     <style>
         .briefings-grid {
             display: grid;
@@ -167,28 +154,44 @@
 
     <script src="script.js"></script>
     <script>
-        // Load all field notes from localStorage
+        // Initialize Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyCl4-CR0cDcInzgWnGJMPDHbBn6L1bWlRs",
+            authDomain: "grey-cell-brief.firebaseapp.com",
+            projectId: "grey-cell-brief",
+            storageBucket: "grey-cell-brief.firebasestorage.app",
+            messagingSenderId: "479300831529",
+            appId: "1:479300831529:web:b295eb7803433fa69acf38",
+            measurementId: "G-6GCYXKL6N0"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Load all field notes from Firestore
         function loadAllFieldNotes() {
-            const fieldNotes = JSON.parse(localStorage.getItem('fieldNotes') || '[]');
             const briefingsGrid = document.getElementById('briefingsGrid');
+            briefingsGrid.innerHTML = '';
             
-            // Sort field notes by date (newest first)
-            fieldNotes.sort((a, b) => new Date(b.date) - new Date(a.date));
-            
-            fieldNotes.forEach((note, index) => {
-                const card = document.createElement('a');
-                card.href = `field-note-template.html?note=${index + 1}`;
-                card.className = 'briefing-card';
-                card.innerHTML = `
-                    <h3>${note.title}</h3>
-                    <div class="date">${new Date(note.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    })}</div>
-                    <div class="arrow">→</div>
-                `;
-                briefingsGrid.appendChild(card);
+            db.collection('fieldNotes').orderBy('date', 'desc').get().then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    const note = doc.data();
+                    const card = document.createElement('a');
+                    card.href = `field-note-template.html?id=${doc.id}`;
+                    card.className = 'briefing-card';
+                    card.innerHTML = `
+                        <h3>${note.title}</h3>
+                        <div class="date">${new Date(note.date).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        })}</div>
+                        <div class="arrow">→</div>
+                    `;
+                    briefingsGrid.appendChild(card);
+                });
+            }).catch((error) => {
+                console.error('Error loading field notes:', error);
+                briefingsGrid.innerHTML = '<p>Error loading field notes. Please try again later.</p>';
             });
         }
 
