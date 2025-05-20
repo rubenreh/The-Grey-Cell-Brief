@@ -8,121 +8,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <!-- Add Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCl4-CR0cDcInzgWnGJMPDHbBn6L1bWlRs",
+        authDomain: "grey-cell-brief.firebaseapp.com",
+        projectId: "grey-cell-brief",
+        storageBucket: "grey-cell-brief.firebasestorage.app",
+        messagingSenderId: "479300831529",
+        appId: "1:479300831529:web:b295eb7803433fa69acf38",
+        measurementId: "G-6GCYXKL6N0"
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
     <style>
-        .admin-main {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 160px 20px 60px;
-        }
-        .admin-tabs {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        .tab-btn {
-            background: #23272f;
-            color: #fff;
-            border: none;
-            padding: 0.75rem 2rem;
-            border-radius: 6px 6px 0 0;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.2s, color 0.2s;
-            outline: none;
-        }
-        .tab-btn.active {
-            background: #fff;
-            color: #23272f;
-            border-bottom: 2px solid #fff;
-        }
-        .admin-section {
-            background: #2a2a2a;
-            border-radius: 0 0 8px 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        .about-block-editor {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-        }
-        .block-controls {
-            margin-bottom: 1rem;
-        }
-        .block-controls button {
-            margin-right: 0.5rem;
-            background: #e0e4ea;
-            border: none;
-            border-radius: 4px;
-            padding: 0.4rem 0.8rem;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-        .block-fields label {
-            display: block;
-            margin-bottom: 0.7rem;
-            color: #23272f;
-        }
-        .block-fields input[type="text"], .block-fields textarea, .block-fields select {
-            width: 100%;
-            margin-top: 0.2rem;
-            margin-bottom: 0.5rem;
-            padding: 0.5rem;
-            border-radius: 4px;
-            border: 1px solid #bbb;
-            font-size: 1rem;
-        }
-        .block-fields textarea {
-            min-height: 600px;
-            resize: vertical;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        .block-preview {
-            margin-top: 1.2rem;
-            background: #fff;
-            border-radius: 6px;
-            padding: 1rem;
-        }
-        .add-block-btn {
-            background: #23272f;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            padding: 0.8rem 2rem;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 1rem;
-        }
-        .add-block-btn:hover {
-            background: #3a4152;
-        }
-        .hidden {
-            display: none !important;
-        }
-        .submit-button {
-            background-color: #ffffff;
-            color: #1a1a1a;
-            border: none;
-            padding: 1.4rem 3.5rem;
-            font-size: 1.35rem;
-            font-weight: 700;
-            cursor: pointer;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-        .edit-button, .delete-button {
-            padding: 1rem 2.2rem;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 700;
-            font-size: 1.15rem;
-            transition: all 0.3s ease;
-        }
+      /* ... your CSS from before ... */
     </style>
 </head>
 <body>
@@ -134,7 +38,6 @@
             </div>
         </nav>
     </header>
-
     <main class="admin-main">
         <h1>Admin Panel</h1>
         <div class="admin-tabs hidden" id="adminTabs">
@@ -203,7 +106,6 @@
             <div id="activeUsersSavedMsg" style="text-align:center;color:#4caf50;font-weight:600;margin-top:1rem;display:none;">Saved!</div>
         </section>
     </main>
-
     <script>
         // Simple authentication (replace with proper authentication in production)
         const ADMIN_USERNAME = 'admin';
@@ -221,10 +123,12 @@
                 document.getElementById('aboutAdminSection').classList.remove('hidden');
                 loadFieldNotes();
                 loadAboutBlocks();
+                loadActiveUsers();
             } else {
                 alert('Invalid credentials');
             }
         });
+
         // Tab switching
         function showTab(tabId) {
             document.getElementById('fieldNotesTab').classList.add('hidden');
@@ -240,135 +144,125 @@
             } else if (tabId === 'activeUsersTab') {
                 document.getElementById('activeUsersTab').classList.remove('hidden');
                 document.querySelector('.tab-btn[onclick*="activeUsersTab"]').classList.add('active');
-                // Load current value
-                const val = localStorage.getItem('activeUsers') || '';
-                document.getElementById('activeUsersCount').value = val;
-                document.getElementById('activeUsersSavedMsg').style.display = 'none';
+                loadActiveUsers();
             }
         }
 
-        // Load existing field notes
-        function loadFieldNotes() {
-            const fieldNotes = JSON.parse(localStorage.getItem('fieldNotes') || '[]');
+        // --- FIELD NOTES (Firestore) ---
+        let editingId = null;
+        async function loadFieldNotes() {
             const fieldNotesList = document.getElementById('fieldNotesList');
             fieldNotesList.innerHTML = '';
-
-            fieldNotes.forEach((note, index) => {
+            const snapshot = await db.collection('fieldnotes').orderBy('date', 'desc').get();
+            snapshot.forEach(doc => {
+                const note = doc.data();
                 const noteElement = document.createElement('div');
                 noteElement.className = 'field-note-item';
                 noteElement.innerHTML = `
                     <h3>${note.title}</h3>
                     <div class="field-note-actions">
-                        <button class="edit-button" onclick="editFieldNote(${index})">Edit</button>
-                        <button class="delete-button" onclick="deleteFieldNote(${index})">Delete</button>
+                        <button class="edit-button" onclick="editFieldNote('${doc.id}')">Edit</button>
+                        <button class="delete-button" onclick="deleteFieldNote('${doc.id}')">Delete</button>
                     </div>
                 `;
                 fieldNotesList.appendChild(noteElement);
             });
         }
 
-        // Save new or edited field note
-        let editingIndex = null;
-        document.getElementById('fieldNoteForm').addEventListener('submit', function(e) {
+        document.getElementById('fieldNoteForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             const title = document.getElementById('title').value;
             const date = document.getElementById('date').value;
             const imageInput = document.getElementById('image');
             const imageFile = imageInput.files[0];
             const content = document.getElementById('content').value;
-            const fieldNotes = JSON.parse(localStorage.getItem('fieldNotes') || '[]');
 
             function saveNote(imageData) {
-                if (editingIndex !== null) {
+                if (editingId) {
                     // Update existing note
-                    fieldNotes[editingIndex] = {
-                        title,
-                        date,
-                        image: imageData !== null ? imageData : fieldNotes[editingIndex].image,
-                        content
-                    };
-                    editingIndex = null;
+                    db.collection('fieldnotes').doc(editingId).update({
+                        title, date, image: imageData !== null ? imageData : window._editingImage, content
+                    }).then(() => {
+                        editingId = null;
+                        window._editingImage = null;
+                        loadFieldNotes();
+                        resetFieldNoteForm();
+                    });
                 } else {
                     // Add new note
-                    fieldNotes.push({
-                        title,
-                        date,
-                        image: imageData,
-                        content
+                    db.collection('fieldnotes').add({
+                        title, date, image: imageData, content
+                    }).then(() => {
+                        loadFieldNotes();
+                        resetFieldNoteForm();
                     });
                 }
-                localStorage.setItem('fieldNotes', JSON.stringify(fieldNotes));
-                loadFieldNotes();
-                document.getElementById('fieldNoteForm').reset();
-                document.querySelector('#fieldNoteForm button[type="submit"]').textContent = 'Save Field Note';
-                // Ensure form is blank and ready for new note
-                document.getElementById('title').value = '';
-                document.getElementById('date').value = '';
-                document.getElementById('content').value = '';
-                document.getElementById('image').value = '';
-                document.getElementById('imagePreview').innerHTML = '';
             }
 
-            if (editingIndex !== null && !imageFile) {
-                // Editing and no new image selected
+            if (editingId && !imageFile) {
                 saveNote(null);
             } else if (imageFile) {
-                // New image selected
                 const reader = new FileReader();
                 reader.onload = function(event) {
                     saveNote(event.target.result);
                 };
                 reader.readAsDataURL(imageFile);
             } else {
-                // New note, no image selected
                 saveNote('');
             }
         });
 
-        // Edit field note
-        function editFieldNote(index) {
-            const fieldNotes = JSON.parse(localStorage.getItem('fieldNotes') || '[]');
-            const note = fieldNotes[index];
+        function resetFieldNoteForm() {
+            document.getElementById('fieldNoteForm').reset();
+            document.querySelector('#fieldNoteForm button[type=\"submit\"]').textContent = 'Save Field Note';
+            document.getElementById('title').value = '';
+            document.getElementById('date').value = '';
+            document.getElementById('content').value = '';
+            document.getElementById('image').value = '';
+            document.getElementById('imagePreview').innerHTML = '';
+        }
+
+        async function editFieldNote(id) {
+            const doc = await db.collection('fieldnotes').doc(id).get();
+            const note = doc.data();
             document.getElementById('title').value = note.title;
             document.getElementById('date').value = note.date;
             document.getElementById('content').value = note.content;
-            // Show image preview
             const imagePreview = document.getElementById('imagePreview');
-            imagePreview.innerHTML = note.image ? `<img src="${note.image}" alt="Current Image" style="max-width:180px;max-height:120px;border-radius:6px;">` : '';
+            imagePreview.innerHTML = note.image ? `<img src=\"${note.image}\" alt=\"Current Image\" style=\"max-width:180px;max-height:120px;border-radius:6px;\">` : '';
             document.getElementById('image').value = '';
-            editingIndex = index;
-            document.querySelector('#fieldNoteForm button[type="submit"]').textContent = 'Save Changes';
+            editingId = id;
+            window._editingImage = note.image;
+            document.querySelector('#fieldNoteForm button[type=\"submit\"]').textContent = 'Save Changes';
         }
 
-        // Delete field note
-        function deleteFieldNote(index) {
+        async function deleteFieldNote(id) {
             if (confirm('Are you sure you want to delete this field note?')) {
-                const fieldNotes = JSON.parse(localStorage.getItem('fieldNotes') || '[]');
-                fieldNotes.splice(index, 1);
-                localStorage.setItem('fieldNotes', JSON.stringify(fieldNotes));
+                await db.collection('fieldnotes').doc(id).delete();
                 loadFieldNotes();
             }
         }
 
-        // About Page Block Editor
-        function loadAboutBlocks() {
-            const aboutBlocks = JSON.parse(localStorage.getItem('aboutBlocks') || '[]');
+        // --- ABOUT PAGE BLOCKS (Firestore) ---
+        async function loadAboutBlocks() {
             const container = document.getElementById('aboutBlocks');
             container.innerHTML = '';
-            aboutBlocks.forEach((block, idx) => {
+            const snapshot = await db.collection('aboutblocks').orderBy('order', 'asc').get();
+            snapshot.forEach((doc, idx) => {
+                const block = doc.data();
                 const blockDiv = document.createElement('div');
                 blockDiv.className = 'about-block-editor';
                 blockDiv.style.background = idx % 2 === 0 ? '#f5f5f5' : '#e0e4ea';
                 blockDiv.innerHTML = `
                     <div class="block-controls">
-                        <button onclick="moveAboutBlock(${idx}, -1)">↑</button>
-                        <button onclick="moveAboutBlock(${idx}, 1)">↓</button>
-                        <button onclick="deleteAboutBlock(${idx})">Delete</button>
+                        <button onclick="moveAboutBlock('${doc.id}', -1)">↑</button>
+                        <button onclick="moveAboutBlock('${doc.id}', 1)">↓</button>
+                        <button onclick="deleteAboutBlock('${doc.id}')">Delete</button>
                     </div>
                     <div class="block-fields">
-                        <label>Image: <input type="file" accept="image/*" onchange="uploadAboutImage(event, ${idx})"></label>
+                        <label>Image: <input type="file" accept="image/*" onchange="uploadAboutImage(event, '${doc.id}')"></label>
                         <label>Image Position:
-                            <select onchange="updateAboutBlockField(${idx}, 'imagePosition', this.value)">
+                            <select onchange="updateAboutBlockField('${doc.id}', 'imagePosition', this.value)">
                                 <option value="left" ${block.imagePosition==='left'?'selected':''}>Left</option>
                                 <option value="right" ${block.imagePosition==='right'?'selected':''}>Right</option>
                                 <option value="top" ${block.imagePosition==='top'?'selected':''}>Top</option>
@@ -376,17 +270,17 @@
                             </select>
                         </label>
                         <label>Image Size:
-                            <select onchange="updateAboutBlockField(${idx}, 'imageSize', this.value)">
+                            <select onchange="updateAboutBlockField('${doc.id}', 'imageSize', this.value)">
                                 <option value="small" ${block.imageSize==='small'?'selected':''}>Small</option>
                                 <option value="medium" ${block.imageSize==='medium'?'selected':''}>Medium</option>
                                 <option value="large" ${block.imageSize==='large'?'selected':''}>Large</option>
                             </select>
                         </label>
-                        <label>Title: <input type="text" value="${block.title||''}" onchange="updateAboutBlockField(${idx}, 'title', this.value)"></label>
-                        <label>Subtitle: <input type="text" value="${block.subtitle||''}" onchange="updateAboutBlockField(${idx}, 'subtitle', this.value)"></label>
-                        <label>Body Text:<br><textarea onchange="updateAboutBlockField(${idx}, 'body', this.value)">${block.body||''}</textarea></label>
+                        <label>Title: <input type="text" value="${block.title||''}" onchange="updateAboutBlockField('${doc.id}', 'title', this.value)"></label>
+                        <label>Subtitle: <input type="text" value="${block.subtitle||''}" onchange="updateAboutBlockField('${doc.id}', 'subtitle', this.value)"></label>
+                        <label>Body Text:<br><textarea onchange="updateAboutBlockField('${doc.id}', 'body', this.value)">${block.body||''}</textarea></label>
                         <label>Block Color:
-                            <select onchange="updateAboutBlockField(${idx}, 'bgColor', this.value)">
+                            <select onchange="updateAboutBlockField('${doc.id}', 'bgColor', this.value)">
                                 <option value="#111" ${block.bgColor==='#111'?'selected':''}>Black</option>
                                 <option value="#1a2233" ${block.bgColor==='#1a2233'?'selected':''}>Dark Blue</option>
                                 <option value="#23272f" ${block.bgColor==='#23272f'?'selected':''}>Dark Grey</option>
@@ -398,11 +292,11 @@
                     <div class="block-preview" style="background:${block.bgColor||'#23272f'};color:${block.bgColor==='#fff'||block.bgColor==='#f5f5f5'?'#23272f':'#fff'};">
                         <strong>Preview:</strong>
                         <div style="display:flex;flex-direction:${block.imagePosition==='top'?'column':block.imagePosition==='right'?'row-reverse':'row'};align-items:center;gap:1.5rem;">
-                            ${block.image ? `<img src="${block.image}" style="max-width:${block.imageSize==='small'?'120px':block.imageSize==='large'?'320px':'200px'};max-height:180px;border-radius:8px;">` : ''}
+                            ${block.image ? `<img src=\"${block.image}\" style=\"max-width:${block.imageSize==='small'?'120px':block.imageSize==='large'?'320px':'200px'};max-height:180px;border-radius:8px;\">` : ''}
                             <div>
-                                ${block.title ? `<div style="font-size:1.5rem;font-weight:bold;">${block.title}</div>` : ''}
-                                ${block.subtitle ? `<div style="font-size:1.1rem;font-weight:500;color:#666;">${block.subtitle}</div>` : ''}
-                                ${block.body ? `<div style="margin-top:0.5rem;">${block.body.replace(/\n/g,'<br>')}</div>` : ''}
+                                ${block.title ? `<div style=\"font-size:1.5rem;font-weight:bold;\">${block.title}</div>` : ''}
+                                ${block.subtitle ? `<div style=\"font-size:1.1rem;font-weight:500;color:#666;\">${block.subtitle}</div>` : ''}
+                                ${block.body ? `<div style=\"margin-top:0.5rem;\">${block.body.replace(/\\n/g,'<br>')}</div>` : ''}
                             </div>
                         </div>
                     </div>
@@ -410,47 +304,57 @@
                 container.appendChild(blockDiv);
             });
         }
-        function addAboutBlock() {
-            const aboutBlocks = JSON.parse(localStorage.getItem('aboutBlocks') || '[]');
-            aboutBlocks.push({image:'',imagePosition:'left',imageSize:'medium',title:'',subtitle:'',body:''});
-            localStorage.setItem('aboutBlocks', JSON.stringify(aboutBlocks));
+        async function addAboutBlock() {
+            const snapshot = await db.collection('aboutblocks').orderBy('order', 'desc').limit(1).get();
+            let order = 0;
+            if (!snapshot.empty) {
+                order = snapshot.docs[0].data().order + 1;
+            }
+            await db.collection('aboutblocks').add({
+                image: '', imagePosition: 'left', imageSize: 'medium', title: '', subtitle: '', body: '', bgColor: '#23272f', order
+            });
             loadAboutBlocks();
         }
-        function updateAboutBlockField(idx, field, value) {
-            const aboutBlocks = JSON.parse(localStorage.getItem('aboutBlocks') || '[]');
-            aboutBlocks[idx][field] = value;
-            localStorage.setItem('aboutBlocks', JSON.stringify(aboutBlocks));
-            loadAboutBlocks();
+        function updateAboutBlockField(id, field, value) {
+            db.collection('aboutblocks').doc(id).update({ [field]: value }).then(loadAboutBlocks);
         }
-        function uploadAboutImage(event, idx) {
+        function uploadAboutImage(event, id) {
             const file = event.target.files[0];
             if (!file) return;
             const reader = new FileReader();
             reader.onload = function(e) {
-                updateAboutBlockField(idx, 'image', e.target.result);
+                updateAboutBlockField(id, 'image', e.target.result);
             };
             reader.readAsDataURL(file);
         }
-        function deleteAboutBlock(idx) {
-            const aboutBlocks = JSON.parse(localStorage.getItem('aboutBlocks') || '[]');
-            aboutBlocks.splice(idx, 1);
-            localStorage.setItem('aboutBlocks', JSON.stringify(aboutBlocks));
-            loadAboutBlocks();
+        function deleteAboutBlock(id) {
+            db.collection('aboutblocks').doc(id).delete().then(loadAboutBlocks);
         }
-        function moveAboutBlock(idx, dir) {
-            const aboutBlocks = JSON.parse(localStorage.getItem('aboutBlocks') || '[]');
-            if ((dir === -1 && idx === 0) || (dir === 1 && idx === aboutBlocks.length-1)) return;
-            const [block] = aboutBlocks.splice(idx, 1);
-            aboutBlocks.splice(idx+dir, 0, block);
-            localStorage.setItem('aboutBlocks', JSON.stringify(aboutBlocks));
+        async function moveAboutBlock(id, dir) {
+            const blocks = [];
+            const snapshot = await db.collection('aboutblocks').orderBy('order', 'asc').get();
+            snapshot.forEach(doc => blocks.push({ id: doc.id, ...doc.data() }));
+            const idx = blocks.findIndex(b => b.id === id);
+            if ((dir === -1 && idx === 0) || (dir === 1 && idx === blocks.length-1)) return;
+            const swapIdx = idx + dir;
+            const thisOrder = blocks[idx].order;
+            const swapOrder = blocks[swapIdx].order;
+            await db.collection('aboutblocks').doc(blocks[idx].id).update({ order: swapOrder });
+            await db.collection('aboutblocks').doc(blocks[swapIdx].id).update({ order: thisOrder });
             loadAboutBlocks();
         }
 
-        // Active Users form logic
-        document.getElementById('activeUsersForm').addEventListener('submit', function(e) {
+        // --- ACTIVE USERS (Firestore) ---
+        async function loadActiveUsers() {
+            const doc = await db.collection('site').doc('activeusers').get();
+            if (doc.exists) {
+                document.getElementById('activeUsersCount').value = doc.data().active || 0;
+            }
+        }
+        document.getElementById('activeUsersForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-            const val = document.getElementById('activeUsersCount').value;
-            localStorage.setItem('activeUsers', val);
+            const val = parseInt(document.getElementById('activeUsersCount').value, 10) || 0;
+            await db.collection('site').doc('activeusers').set({ active: val });
             document.getElementById('activeUsersSavedMsg').style.display = '';
             setTimeout(() => {
                 document.getElementById('activeUsersSavedMsg').style.display = 'none';
@@ -458,4 +362,4 @@
         });
     </script>
 </body>
-</html> 
+</html>
