@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Firebase App (the core Firebase SDK) -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
     <!-- Add Firestore -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
     <script>
       const firebaseConfig = {
         apiKey: "AIzaSyCl4-CR0cDcInzgWnGJMPDHbBn6L1bWlRs",
@@ -109,7 +109,7 @@
     async function loadAllFieldNotes() {
         const briefingsGrid = document.getElementById('briefingsGrid');
         briefingsGrid.innerHTML = '';
-        const snapshot = await db.collection('fieldnotes').orderBy('date', 'desc').get();
+        const snapshot = await db.collection('fieldNotes').orderBy('date', 'desc').get();
         snapshot.forEach(doc => {
             const note = doc.data();
             const card = document.createElement('a');
@@ -130,9 +130,9 @@
     // Show active users in the footer
     async function showActiveUsersFooter() {
         const footer = document.getElementById('activeUsersFooter');
-        const doc = await db.collection('site').doc('activeusers').get();
-        if (doc.exists && doc.data().active) {
-            footer.textContent = `Active Users: ${doc.data().active}`;
+        const doc = await db.collection('siteMeta').doc('activeUsers').get();
+        if (doc.exists && doc.data().count) {
+            footer.textContent = `Active Users: ${doc.data().count}`;
         } else {
             footer.textContent = '';
         }
