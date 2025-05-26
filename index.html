@@ -167,27 +167,32 @@
 
     <script src="script.js"></script>
     <script>
-        // Load field notes from localStorage
-        function loadFieldNotes() {
-            const fieldNotes = JSON.parse(localStorage.getItem('fieldNotes') || '[]');
-            const briefingCards = document.getElementById('briefingCards');
-            
-            // Sort field notes by date (newest first)
-            fieldNotes.sort((a, b) => new Date(b.date) - new Date(a.date));
-            
-            // Only take the 3 most recent field notes
-            const recentNotes = fieldNotes.slice(0, 3);
-            
-            recentNotes.forEach((note, index) => {
-                const card = document.createElement('a');
-                card.href = `field-note-template.html?note=${index + 1}`;
-                card.className = 'card';
-                card.innerHTML = `
-                    <h3>${note.title}</h3>
-                    <div class="arrow">→</div>
-                `;
-                briefingCards.appendChild(card);
-            });
+        // Load field notes from JSON file
+        async function loadFieldNotes() {
+            try {
+                const response = await fetch('field-notes-list.json');
+                const fieldNotes = await response.json();
+                const briefingCards = document.getElementById('briefingCards');
+                
+                // Sort field notes by date (newest first)
+                fieldNotes.sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                // Only take the 3 most recent field notes
+                const recentNotes = fieldNotes.slice(0, 3);
+                
+                recentNotes.forEach((note) => {
+                    const card = document.createElement('a');
+                    card.href = note.file;
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <h3>${note.title}</h3>
+                        <div class="arrow">→</div>
+                    `;
+                    briefingCards.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error loading field notes:', error);
+            }
         }
 
         // Load field notes when the page loads
