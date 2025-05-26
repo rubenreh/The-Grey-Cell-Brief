@@ -166,29 +166,34 @@
 
     <script src="script.js"></script>
     <script>
-        // Load all field notes from localStorage
-        function loadAllFieldNotes() {
-            const fieldNotes = JSON.parse(localStorage.getItem('fieldNotes') || '[]');
-            const briefingsGrid = document.getElementById('briefingsGrid');
-            
-            // Sort field notes by date (newest first)
-            fieldNotes.sort((a, b) => new Date(b.date) - new Date(a.date));
-            
-            fieldNotes.forEach((note, index) => {
-                const card = document.createElement('a');
-                card.href = `field-note-template.html?note=${index + 1}`;
-                card.className = 'briefing-card';
-                card.innerHTML = `
-                    <h3>${note.title}</h3>
-                    <div class="date">${new Date(note.date).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    })}</div>
-                    <div class="arrow">→</div>
-                `;
-                briefingsGrid.appendChild(card);
-            });
+        // Load all field notes from JSON file
+        async function loadAllFieldNotes() {
+            try {
+                const response = await fetch('field-notes-list.json');
+                const fieldNotes = await response.json();
+                const briefingsGrid = document.getElementById('briefingsGrid');
+                
+                // Sort field notes by date (newest first)
+                fieldNotes.sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                fieldNotes.forEach((note) => {
+                    const card = document.createElement('a');
+                    card.href = note.file;
+                    card.className = 'briefing-card';
+                    card.innerHTML = `
+                        <h3>${note.title}</h3>
+                        <div class="date">${new Date(note.date).toLocaleDateString('en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                        })}</div>
+                        <div class="arrow">→</div>
+                    `;
+                    briefingsGrid.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error loading field notes:', error);
+            }
         }
 
         // Load field notes when the page loads
