@@ -1,5 +1,5 @@
 // Active users count
-const ACTIVE_USERS = 252; // Change this number to set active users for all devices
+const ACTIVE_USERS = 5; // Change this number to set active users for all devices
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
