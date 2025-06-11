@@ -12,12 +12,12 @@
         .energy-border {
             position: relative;
             padding: 2px;
-            background: linear-gradient(45deg, #00ff88, #00a1ff, #00ff88);
+            background: linear-gradient(45deg, #2a2f3a, #3a3f4a, #2a2f3a);
             background-size: 200% 200%;
-            animation: gradient 8s ease infinite;
+            animation: gradient 12s ease infinite;
             border-radius: 12px;
-            margin: 2rem auto;
-            max-width: 900px;
+            margin: 6rem auto 2rem auto;
+            max-width: 1000px;
         }
 
         @keyframes gradient {
@@ -27,8 +27,8 @@
         }
 
         .content-box {
-            background: rgba(26, 29, 36, 0.95);
-            padding: 3rem;
+            background: rgba(26, 29, 36, 0.98);
+            padding: 4rem;
             border-radius: 10px;
             color: #fff;
             position: relative;
@@ -42,8 +42,8 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.5), transparent);
-            animation: scan 3s linear infinite;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: scan 4s linear infinite;
         }
 
         @keyframes scan {
@@ -52,29 +52,33 @@
         }
 
         .title {
-            font-size: 2.5rem;
+            font-size: 3.2rem;
             font-weight: 800;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #00ff88, #00a1ff);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #ffffff, #b6c2d1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-align: center;
+            letter-spacing: -0.5px;
         }
 
         .subtitle {
-            font-size: 1.5rem;
-            color: #00ff88;
-            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            color: #b6c2d1;
+            margin-bottom: 3rem;
             text-align: center;
             font-weight: 500;
         }
 
         .body-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
+            font-size: 1.3rem;
+            line-height: 2;
             color: #b6c2d1;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .body-text:last-child {
@@ -87,7 +91,7 @@
             height: 100%;
             top: 0;
             left: 0;
-            background: radial-gradient(circle at center, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
             pointer-events: none;
         }
     </style>
