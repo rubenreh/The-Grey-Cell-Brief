@@ -115,6 +115,41 @@
             background: radial-gradient(circle at center, rgba(255,255,255,0.03) 0%, transparent 70%);
             pointer-events: none;
         }
+        /* Responsive styles for mobile */
+        @media (max-width: 600px) {
+            .about-title {
+                font-size: 1.5rem;
+                margin-top: 2.2rem;
+                margin-bottom: 1.2rem;
+            }
+            .about-title-underline {
+                width: 48px;
+                height: 3px;
+                margin: 0.7rem auto 0 auto;
+            }
+            .energy-border {
+                margin: 1.2rem 0 1.2rem 0;
+                max-width: 98vw;
+                border-radius: 10px;
+            }
+            .content-box {
+                padding: 1.2rem 0.7rem;
+                border-radius: 8px;
+            }
+            .title {
+                font-size: 1.3rem;
+                margin-bottom: 0.7rem;
+            }
+            .subtitle {
+                font-size: 1.05rem;
+                margin-bottom: 1.2rem;
+            }
+            .body-text {
+                font-size: 0.98rem;
+                margin-bottom: 1.1rem;
+                max-width: 98vw;
+            }
+        }
     </style>
 </head>
 <body style="min-height:100vh; display:flex; flex-direction:column; background: #0f1117;">
