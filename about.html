@@ -68,6 +68,28 @@
 
     <script src="script.js"></script>
     <script>
+    // Set About Page Blocks
+    const aboutBlocks = [
+        {
+            title: "This is a journal, not a brand.",
+            subtitle: "It doesn't sell. It signals.",
+            body: "The Grey Cell Brief was created to give shape to the shadows—intelligence, strategy, operational mindset—outside of sanitized think-tank talk and open-source noise.",
+            bgColor: "#23272f",
+            imagePosition: "top"
+        },
+        {
+            body: "The voice behind this page prefers to stay behind it.\nThat's the nature of the work.\nThis isn't marketing.\nIt's a journal created to give structure to the unspoken—\nto translate what's seen, sensed, and understood by those who move quietly behind the visible world.",
+            bgColor: "#1a1d24",
+            imagePosition: "top"
+        },
+        {
+            body: "You won't find names here. That's intentional.\n\nYou'll find strategy, tradecraft, pattern recognition, and the occasional gut-level warning.",
+            bgColor: "#23272f",
+            imagePosition: "top"
+        }
+    ];
+    localStorage.setItem('aboutBlocks', JSON.stringify(aboutBlocks));
+
     // Render About Page Blocks from localStorage
     function renderAboutBlocks() {
         const aboutBlocks = JSON.parse(localStorage.getItem('aboutBlocks') || '[]');
