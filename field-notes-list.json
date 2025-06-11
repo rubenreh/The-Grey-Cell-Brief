@@ -1,7 +1,12 @@
 [
     {
         "title": "FIELD NOTE #001",
-        "date": "2025-06-01",
+        "date": "2025-12-01",
         "file": "field-note-003.html"
+    },
+    {
+        "title": "Field Note #002 – Digital Footprint Analysis",
+        "date": "2024-08-20",
+        "file": "field-note-002.html"
     }
 ] 
