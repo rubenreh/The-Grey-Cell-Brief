@@ -937,72 +937,74 @@ footer {
 
 /* --- IMPROVED MOBILE STYLES FOR HOMEPAGE --- */
 @media (max-width: 600px) {
-  body {
-    background: #181a1a;
-  }
-  main {
-    padding: 0;
-    margin: 0;
-  }
   .hero {
-    padding: 1.2rem 0 0.7rem 0;
+    padding: 0.7rem 0 0.5rem 0;
     margin-top: 56px;
-    gap: 0.7rem;
+    gap: 0.4rem;
     background: #181a1a;
+    text-align: center;
   }
   .hero-content {
-    padding: 0 1.2rem;
+    padding: 0 0.7rem;
+    text-align: center;
   }
   .hero h1 {
     font-size: 2.1rem;
     font-weight: 900;
     line-height: 1.1;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.4rem;
     letter-spacing: 0.5px;
+    text-align: center;
   }
   .cta-button {
-    margin-bottom: 0.2rem;
-    margin-top: 0.2rem;
+    margin-bottom: 0.1rem;
+    margin-top: 0.1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero-image {
     width: 100%;
-    min-height: 120px;
-    height: 32vw;
-    max-height: 180px;
+    min-height: 100px;
+    height: 28vw;
+    max-height: 120px;
     border-radius: 8px;
-    margin: 0.7rem 0 0.7rem 0;
+    margin: 0.4rem 0 0.4rem 0;
     background-size: cover;
     background-position: center;
   }
   .description {
     background: #f5f5f5;
     color: #181a1a;
-    padding: 1.1rem 1.2rem 0.7rem 1.2rem;
+    padding: 0.5rem 0.7rem 0.3rem 0.7rem;
     font-size: 1rem;
     margin: 0;
+    text-align: center;
   }
   .main-description, .sub-description {
     font-size: 1rem;
-    margin-bottom: 0.3rem;
-    text-align: left;
+    margin-bottom: 0.2rem;
+    text-align: center;
   }
   .featured {
     background: #f5f5f5;
-    padding: 1.1rem 1.2rem 0.7rem 1.2rem;
+    padding: 0.5rem 0.7rem 0.3rem 0.7rem;
     margin: 0;
+    text-align: center;
   }
   .featured h2 {
     font-size: 1.1rem;
-    margin-bottom: 0.7rem;
-    text-align: left;
+    margin-bottom: 0.3rem;
+    text-align: center;
     font-weight: 700;
     letter-spacing: 0.5px;
     color: #181a1a;
   }
   .briefing-cards {
-    gap: 0.5rem;
-    padding-bottom: 0.2rem;
-    margin: 0;
+    gap: 0.3rem;
+    padding-bottom: 0.1rem;
+    margin: 0 auto;
+    justify-content: center;
   }
   .card {
     flex: 0 0 38vw;
@@ -1013,69 +1015,76 @@ footer {
     min-height: 110px;
     font-size: 0.95rem;
     border-radius: 10px;
-    padding: 0.5rem 0.2rem;
+    padding: 0.3rem 0.1rem;
     background: #fff !important;
     color: #181a1a;
-    margin: 0;
+    margin: 0 auto;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     border: 1.5px solid #e0e0e0;
-    text-align: left;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
   }
   .card h3 {
     font-size: 0.95rem;
     font-weight: 700;
-    margin: 0 0 0.2rem 0;
+    margin: 0 0 0.1rem 0;
     line-height: 1.2;
     height: auto;
     color: #181a1a;
-    text-align: left;
+    text-align: center;
     width: 100%;
   }
   .arrow {
-    right: 0.7rem;
-    bottom: 0.7rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
     font-size: 1.1rem;
     color: #181a1a;
   }
   .subscribe {
     background: #181a1a;
     color: #fff;
-    padding: 1.1rem 1.2rem 0.7rem 1.2rem;
+    padding: 0.5rem 0.7rem 0.3rem 0.7rem;
     margin: 0;
-    text-align: left;
+    text-align: center;
   }
   .subscribe h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
     color: #fff;
-    text-align: left;
+    text-align: center;
   }
   .join-button {
-    margin: 0.2rem 0 0.2rem 0;
+    margin: 0.1rem 0 0.1rem 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
   .categories {
     background: #fff;
     color: #181a1a;
-    padding: 1.1rem 0.5rem 0.7rem 0.5rem;
+    padding: 0.5rem 0.2rem 0.3rem 0.2rem;
     margin: 0;
+    text-align: center;
   }
   .category-icons {
-    gap: 1.2rem;
-    padding: 0.2rem 0;
+    gap: 0.7rem;
+    padding: 0.1rem 0;
+    justify-content: center;
   }
   .footer-content, .footer-left, .footer-brand, .footer-links, .social-icons {
     margin: 0;
     padding: 0;
+    text-align: center;
   }
   footer {
     background: #181a1a;
     color: #fff;
-    padding: 1.1rem 1.2rem 0.7rem 1.2rem;
+    padding: 0.5rem 0.7rem 0.3rem 0.7rem;
     margin: 0;
+    text-align: center;
   }
 }
 
