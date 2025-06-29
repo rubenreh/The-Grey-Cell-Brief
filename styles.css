@@ -937,77 +937,88 @@ footer {
 
 /* --- IMPROVED MOBILE STYLES FOR HOMEPAGE --- */
 @media (max-width: 600px) {
-  .hero {
-    padding: 0.7rem 0 0.2rem 0;
-    margin-top: 72px;
-    gap: 0.1rem;
+  .mobile-nav {
+    display: none !important;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100vw;
     background: #181a1a;
-    text-align: center;
+    z-index: 1099;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    padding: 0.5rem 0 1rem 0;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-bottom: 1.5px solid #222;
+    animation: fadeIn 0.2s;
+    flex-direction: column;
   }
-  .hero-content {
-    padding: 0 0.7rem;
-    text-align: center;
+  .mobile-nav.open {
+    display: flex !important;
+  }
+  header {
+    height: 56px;
+  }
+  nav {
+    height: 56px;
+  }
+  .logo {
+    height: 56px;
+  }
+  .logo a {
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    padding-left: 0;
+  }
+  .hamburger {
+    width: 22px;
+    height: 22px;
+    right: 10px;
+    top: 17px;
+    border-radius: 6px;
+    padding: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    z-index: 1102;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+  }
+  .hamburger span {
+    width: 18px;
+    height: 2px;
+    margin: 3px 0;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.3s;
+    display: block;
+  }
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
   }
   .hero h1 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     font-weight: 900;
     line-height: 1.1;
-    margin-bottom: 0.2rem;
+    margin-bottom: 1.2rem;
+    word-break: break-word;
+    text-align: left;
     letter-spacing: 0.5px;
-    text-align: center;
-  }
-  .cta-button {
-    margin-bottom: 0.1rem;
-    margin-top: 0.1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .hero-image {
-    width: 100%;
-    min-height: 100px;
-    height: 28vw;
-    max-height: 120px;
-    border-radius: 8px;
-    margin: 0.2rem 0 0.2rem 0;
-    background-size: cover;
-    background-position: center;
-  }
-  .sub-description {
-    margin-bottom: 1.2rem !important;
-  }
-  .description {
-    background: #f5f5f5;
-    color: #181a1a;
-    padding: 0.5rem 0.7rem 0.3rem 0.7rem;
-    font-size: 1rem;
-    margin: 0;
-    text-align: center;
-  }
-  .main-description, .sub-description {
-    font-size: 1rem;
-    margin-bottom: 0.2rem;
-    text-align: center;
-  }
-  .featured {
-    background: #f5f5f5;
-    padding: 0.5rem 0.7rem 0.3rem 0.7rem;
-    margin: 0;
-    text-align: center;
-  }
-  .featured h2 {
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
-    text-align: center;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: #181a1a;
   }
   .briefing-cards {
-    gap: 0.3rem;
-    padding-bottom: 0.1rem;
-    margin: 0 auto;
-    justify-content: center;
+    gap: 0.7rem;
+    padding-bottom: 0.3rem;
   }
   .card {
     flex: 0 0 38vw;
@@ -1017,12 +1028,50 @@ footer {
     max-height: 38vw;
     min-height: 110px;
     font-size: 0.95rem;
-    border-radius: 10px;
-    padding: 0.3rem 0.1rem;
+    border-radius: 12px;
+    padding: 0.7rem 0.3rem;
+  }
+  .card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem 0;
+    line-height: 1.2;
+    height: auto;
+  }
+  .arrow {
+    right: 0.7rem;
+    bottom: 0.7rem;
+    font-size: 1.1rem;
+  }
+  .mobile-nav-link {
+    display: block;
+    width: 100%;
+    color: #fff;
+    background: #181a1a;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 0;
+    margin: 0;
+    cursor: pointer;
+    transition: background 0.2s;
+    box-shadow: none;
+    text-decoration: none;
+  }
+  .mobile-nav-link:hover, .mobile-nav-link:active, .mobile-nav-link:focus {
+    background: #232323;
+    color: #fff;
+  }
+  .card {
     background: #fff !important;
     color: #181a1a;
-    margin: 0 auto;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    border-radius: 12px;
     border: 1.5px solid #e0e0e0;
     text-align: center;
     display: flex;
@@ -1030,71 +1079,7 @@ footer {
     align-items: center;
     justify-content: center;
   }
-  .card h3 {
-    font-size: 0.95rem;
-    font-weight: 700;
-    margin: 0 0 0.1rem 0;
-    line-height: 1.2;
-    height: auto;
-    color: #181a1a;
-    text-align: center;
-    width: 100%;
-  }
-  .arrow {
-    right: 0.5rem;
-    bottom: 0.5rem;
-    font-size: 1.1rem;
-    color: #181a1a;
-  }
-  .subscribe {
-    background: #181a1a;
-    color: #fff;
-    padding: 0.5rem 0.7rem 0.3rem 0.7rem;
-    margin: 0;
-    text-align: center;
-  }
-  .subscribe h2 {
-    font-size: 1.1rem;
-    margin-bottom: 0.3rem;
-    color: #fff;
-    text-align: center;
-  }
-  .join-button {
-    margin: 0.1rem 0 0.1rem 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .categories {
-    background: #fff;
-    color: #181a1a;
-    padding: 0.5rem 0.2rem 0.3rem 0.2rem;
-    margin: 0;
-    text-align: center;
-  }
-  .category-icons {
-    gap: 0.7rem;
-    padding: 0.1rem 0;
-    justify-content: center;
-  }
-  .footer-content, .footer-left, .footer-brand, .footer-links, .social-icons {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  footer {
-    background: #181a1a;
-    color: #fff;
-    padding: 0.5rem 0.7rem 0.3rem 0.7rem;
-    margin: 0;
-    text-align: center;
-  }
-  .nav-links,
-  .dropdown,
-  .dropdown-content,
-  nav > a:not(.hamburger):not(.mobile-nav *),
-  nav > button:not(.hamburger):not(.mobile-nav *),
-  nav > div:not(.logo):not(.mobile-nav):not(.hamburger) {
+  .desktop-nav {
     display: none !important;
   }
 }
@@ -1109,16 +1094,5 @@ footer {
   }
   .card h3 {
     font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 600px) {
-  nav > a:not(.hamburger):not(.mobile-nav *),
-  nav > button:not(.hamburger):not(.mobile-nav *),
-  nav > div:not(.logo):not(.mobile-nav):not(.hamburger),
-  .nav-links,
-  .dropdown,
-  .dropdown-content {
-    display: none !important;
   }
 } 
