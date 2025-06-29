@@ -1008,133 +1008,40 @@ footer {
     transform: translateY(-5px) rotate(-45deg);
   }
   .hero {
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 2rem 2vw 1rem 2vw;
-    gap: 1.2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     margin-top: 56px;
-    min-height: unset;
-    background: #222 !important;
-  }
-  .hero-content {
-    width: 60%;
-    max-width: 60%;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-  }
-  .hero h1, .hero-content, .logo a {
-    color: #fff !important;
-  }
-  .hero h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 1.2rem;
-    word-break: break-word;
-    text-align: left;
-    letter-spacing: 0.5px;
-  }
-  .hero-image {
-    width: 40vw;
-    max-width: 40vw;
-    min-width: 120px;
-    height: 40vw;
-    max-height: 40vw;
-    min-height: 120px;
-    border-radius: 8px;
-    margin: 0;
-    background-size: cover;
-    background-position: center;
-    display: block;
-  }
-  .briefing-cards {
     gap: 0.7rem;
-    padding-bottom: 0.3rem;
+  }
+  .hero-content, .hero-image {
+    margin: 0;
+    padding: 0;
+  }
+  .description {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .main-description, .sub-description {
+    margin-bottom: 0.5rem;
   }
   .featured {
-    background: #f3f3f3 !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
-  .card {
-    background: #f3f3f3 !important;
-    color: #181a1a;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    border-radius: 12px;
-    border: 1.5px solid #e0e0e0;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .featured h2 {
+    margin-bottom: 0.7rem;
   }
-  .card h3 {
-    font-size: 0.95rem;
-    font-weight: 700;
-    margin: 0 0 0.4rem 0;
-    line-height: 1.2;
-    height: auto;
+  .subscribe {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
-  .arrow {
-    right: 0.7rem;
-    bottom: 0.7rem;
-    font-size: 1.1rem;
-  }
-  .mobile-nav-link {
-    display: block;
-    width: 100%;
-    color: #fff;
-    background: #181a1a;
-    border: none;
-    outline: none;
-    text-align: left;
-    font-size: 1.1rem;
-    font-weight: 600;
-    padding: 1rem 2rem;
-    border-radius: 0;
-    margin: 0;
-    cursor: pointer;
-    transition: background 0.2s;
-    box-shadow: none;
-    text-decoration: none;
-  }
-  .mobile-nav-link:hover, .mobile-nav-link:active, .mobile-nav-link:focus {
-    background: #232323;
-    color: #fff;
-  }
-  .desktop-nav {
-    display: none !important;
-  }
-  .cta-button {
-    background: #222 !important;
-    color: #fff !important;
-    border: none;
-    border-radius: 4px;
-    font-weight: 700;
-    box-shadow: none;
-    transition: background 0.2s;
-  }
-  .cta-button:hover, .cta-button:active, .cta-button:focus {
-    background: #333 !important;
-    color: #fff !important;
-  }
-  .join-button {
-    background: #222 !important;
-    color: #fff !important;
-    border: none;
-    border-radius: 4px;
-    font-weight: 700;
-    box-shadow: none;
-    transition: background 0.2s;
-  }
-  .join-button:hover, .join-button:active, .join-button:focus {
-    background: #333 !important;
-    color: #fff !important;
+  .categories {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   footer {
-    background: #181a1a !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   .featured h2 {
     color: #222 !important;
