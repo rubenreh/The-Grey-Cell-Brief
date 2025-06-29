@@ -1092,7 +1092,9 @@ footer {
   .nav-links,
   .dropdown,
   .dropdown-content,
-  nav > *:not(.logo):not(.hamburger):not(.mobile-nav) {
+  nav > a:not(.hamburger):not(.mobile-nav *),
+  nav > button:not(.hamburger):not(.mobile-nav *),
+  nav > div:not(.logo):not(.mobile-nav):not(.hamburger) {
     display: none !important;
   }
 }
@@ -1107,5 +1109,16 @@ footer {
   }
   .card h3 {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  nav > a:not(.hamburger):not(.mobile-nav *),
+  nav > button:not(.hamburger):not(.mobile-nav *),
+  nav > div:not(.logo):not(.mobile-nav):not(.hamburger),
+  .nav-links,
+  .dropdown,
+  .dropdown-content {
+    display: none !important;
   }
 } 
