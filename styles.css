@@ -1020,6 +1020,9 @@ footer {
     gap: 0.7rem;
     padding-bottom: 0.3rem;
   }
+  .featured {
+    background: #f5f5f5 !important;
+  }
   .card {
     background: #f5f5f5 !important;
     color: #181a1a;
