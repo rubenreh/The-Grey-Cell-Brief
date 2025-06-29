@@ -1160,10 +1160,10 @@ footer {
     line-height: 1.2;
   }
   .description {
-    margin-top: 0.5rem !important;
-    padding-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;
-    padding-bottom: 0.5rem !important;
+    margin-top: 0.7rem !important;
+    padding-top: 0.7rem !important;
+    margin-bottom: 0.7rem !important;
+    padding-bottom: 0.7rem !important;
   }
   .main-description, .sub-description {
     margin-bottom: 0.2rem !important;
