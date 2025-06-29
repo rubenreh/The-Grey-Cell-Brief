@@ -1136,6 +1136,17 @@ footer {
   footer {
     background: #181a1a !important;
   }
+  .featured h2 {
+    color: #222 !important;
+  }
+  .card {
+    width: 38vw !important;
+    max-width: 38vw !important;
+    min-width: 110px !important;
+    height: 38vw !important;
+    max-height: 38vw !important;
+    min-height: 110px !important;
+  }
 }
 
 @media (max-width: 400px) {
