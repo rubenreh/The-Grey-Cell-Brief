@@ -1007,14 +1007,44 @@ footer {
   .hamburger.open span:nth-child(3) {
     transform: translateY(-5px) rotate(-45deg);
   }
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 2vw 1rem 2vw;
+    gap: 1.2rem;
+    margin-top: 56px;
+    min-height: unset;
+    background: #181a1a;
+  }
+  .hero-content {
+    width: 60%;
+    max-width: 60%;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 1.2rem;
     word-break: break-word;
     text-align: left;
     letter-spacing: 0.5px;
+  }
+  .hero-image {
+    width: 40vw;
+    max-width: 40vw;
+    min-width: 120px;
+    height: 40vw;
+    max-height: 40vw;
+    min-height: 120px;
+    border-radius: 8px;
+    margin: 0;
+    background-size: cover;
+    background-position: center;
+    display: block;
   }
   .briefing-cards {
     gap: 0.7rem;
