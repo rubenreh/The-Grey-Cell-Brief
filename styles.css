@@ -1092,9 +1092,7 @@ footer {
   .nav-links,
   .dropdown,
   .dropdown-content,
-  nav > a:not(.hamburger):not(.mobile-nav *),
-  nav > button:not(.hamburger):not(.mobile-nav *),
-  nav > div:not(.logo):not(.mobile-nav):not(.hamburger) {
+  nav > *:not(.logo):not(.hamburger):not(.mobile-nav) {
     display: none !important;
   }
 }
