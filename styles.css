@@ -1089,6 +1089,14 @@ footer {
     margin: 0;
     text-align: center;
   }
+  .nav-links,
+  .dropdown,
+  .dropdown-content,
+  nav > a:not(.hamburger):not(.mobile-nav *),
+  nav > button:not(.hamburger):not(.mobile-nav *),
+  nav > div:not(.logo):not(.mobile-nav):not(.hamburger) {
+    display: none !important;
+  }
 }
 
 @media (max-width: 400px) {
