@@ -30,7 +30,7 @@
     <header>
         <nav>
             <div class="logo"><a href="index.html">THE GREY CELL BRIEF</a></div>
-            <button class="hamburger" aria-label="Open navigation menu" onclick="toggleMobileNav()">
+            <button class="hamburger" aria-label="Open navigation menu" id="hamburgerBtn" onclick="toggleMobileNav()">
                 <span></span><span></span><span></span>
             </button>
             <div class="mobile-nav" id="mobileNav">
@@ -209,7 +209,9 @@
 
         function toggleMobileNav() {
             var nav = document.getElementById('mobileNav');
+            var btn = document.getElementById('hamburgerBtn');
             nav.classList.toggle('open');
+            btn.classList.toggle('open');
         }
     </script>
 </body>
