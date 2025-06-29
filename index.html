@@ -30,7 +30,16 @@
     <header>
         <nav>
             <div class="logo"><a href="index.html">THE GREY CELL BRIEF</a></div>
-            <div class="nav-links">
+            <button class="hamburger" aria-label="Open navigation menu" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-nav" id="mobileNav">
+                <a href="#" class="members-link">MEMBERS ONLY</a>
+                <a href="briefings.html">BRIEFINGS</a>
+                <a href="about.html">ABOUT THE BRIEF</a>
+                <a href="join.html">CONTACT</a>
+            </div>
+            <div class="nav-links desktop-nav">
                 <div class="dropdown">
                     <a href="#" class="members-link">MEMBERS ONLY</a>
                     <div class="dropdown-content">
@@ -197,6 +206,11 @@
 
         // Load field notes when the page loads
         document.addEventListener('DOMContentLoaded', loadFieldNotes);
+
+        function toggleMobileNav() {
+            var nav = document.getElementById('mobileNav');
+            nav.classList.toggle('open');
+        }
     </script>
 </body>
 </html> 
