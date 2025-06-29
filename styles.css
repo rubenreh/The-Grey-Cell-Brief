@@ -1010,8 +1010,6 @@ footer {
   .hero {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    margin-top: 56px;
-    gap: 0.7rem;
   }
   .hero-content, .hero-image {
     margin: 0;
