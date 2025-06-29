@@ -937,6 +937,25 @@ footer {
 
 /* --- IMPROVED MOBILE STYLES FOR HOMEPAGE --- */
 @media (max-width: 600px) {
+  .mobile-nav {
+    display: none !important;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 100vw;
+    background: #181a1a;
+    z-index: 1099;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    padding: 0.5rem 0 1rem 0;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-bottom: 1.5px solid #222;
+    animation: fadeIn 0.2s;
+    flex-direction: column;
+  }
+  .mobile-nav.open {
+    display: flex !important;
+  }
   header {
     height: 56px;
   }
