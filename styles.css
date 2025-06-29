@@ -938,216 +938,68 @@ footer {
 /* --- IMPROVED MOBILE STYLES FOR HOMEPAGE --- */
 @media (max-width: 600px) {
   header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 64px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    background: #181a1a;
-    z-index: 1000;
-    border-bottom: 1.5px solid #222;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    padding: 0;
+    height: 56px;
   }
   nav {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 64px;
-    padding: 0;
+    height: 56px;
   }
   .logo {
-    flex: 1 1 auto;
-    text-align: center;
-    margin: 0;
-    z-index: 1101;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 64px;
+    height: 56px;
   }
   .logo a {
-    font-size: 1.6rem;
-    font-weight: 800;
+    font-size: 1.25rem;
+    font-weight: 900;
     letter-spacing: 1.5px;
-    color: #fff;
-    text-decoration: none;
-    display: inline-block;
-    line-height: 1;
-    padding: 0;
+    padding-left: 0;
   }
   .hamburger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    background: none;
-    border: none;
-    position: absolute;
-    right: 16px;
-    top: 10px;
-    z-index: 1102;
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    border-radius: 8px;
-  }
-  .hamburger:active, .hamburger:focus {
-    background: #232323;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    width: 22px;
+    height: 22px;
+    right: 10px;
+    top: 17px;
+    border-radius: 6px;
+    padding: 0;
   }
   .hamburger span {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background: #fff;
-    margin: 4px 0;
-    border-radius: 2px;
-    transition: all 0.3s;
-  }
-  .desktop-nav {
-    display: none !important;
-  }
-  .mobile-nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    width: 100vw;
-    background: #181a1a;
-    z-index: 1099;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-    padding: 0.5rem 0 1rem 0;
-    border-bottom-left-radius: 18px;
-    border-bottom-right-radius: 18px;
-    border-bottom: 1.5px solid #222;
-    animation: fadeIn 0.2s;
-  }
-  .mobile-nav.open {
-    display: flex;
-  }
-  .mobile-nav a {
-    color: #fff;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    text-align: left;
-    text-decoration: none;
-    border-radius: 0;
-    border: none;
-    background: none;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    margin: 0;
-    transition: background 0.2s;
-  }
-  .mobile-nav a:active, .mobile-nav a:focus {
-    background: #232323;
-  }
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2rem 6vw 1rem 6vw;
-    gap: 1.2rem;
-    margin-top: 90px;
-    min-height: unset;
-    background: #181a1a;
-  }
-  .hero-content {
-    width: 100%;
-    padding-left: 8px;
-    text-align: left;
+    width: 18px;
+    height: 2px;
+    margin: 3px 0;
   }
   .hero h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    line-height: 1.15;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.1;
     margin-bottom: 1.2rem;
     word-break: break-word;
     text-align: left;
-  }
-  .cta-button {
-    width: auto;
-    padding: 0.8rem 1.5rem;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    margin-left: 0;
-    display: inline-block;
-    text-align: left;
-  }
-  .hero-image {
-    width: 100%;
-    min-height: 160px;
-    height: 32vw;
-    max-height: 220px;
-    border-radius: 6px;
-    margin-top: 1.2rem;
-    background-size: cover;
-    background-position: center;
+    letter-spacing: 0.5px;
   }
   .briefing-cards {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    white-space: nowrap;
-    gap: 1rem;
-    padding-bottom: 0.5rem;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
+    gap: 0.7rem;
+    padding-bottom: 0.3rem;
   }
   .card {
-    flex: 0 0 70vw;
-    max-width: 70vw;
-    min-width: 160px;
-    height: 70vw;
-    max-height: 70vw;
-    min-height: 160px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1rem;
-    background: #fff;
-    border: 1.5px solid #e0e0e0;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-    border-radius: 18px;
-    color: #181a1a;
-    padding: 1.1rem 0.7rem 1.1rem 0.7rem;
-    scroll-snap-align: start;
-    position: relative;
-    text-align: center;
-  }
-  .card:last-child {
-    margin-right: 0;
+    flex: 0 0 38vw;
+    max-width: 38vw;
+    min-width: 110px;
+    height: 38vw;
+    max-height: 38vw;
+    min-height: 110px;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    padding: 0.7rem 0.3rem;
   }
   .card h3 {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     font-weight: 700;
-    margin: 0 0 0.7rem 0;
-    flex: 1 1 auto;
-    text-align: center;
-    line-height: 1.3;
-    word-break: break-word;
-    color: #181a1a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
+    margin: 0 0 0.4rem 0;
+    line-height: 1.2;
+    height: auto;
   }
   .arrow {
-    position: absolute;
-    right: 1.1rem;
-    bottom: 1.1rem;
-    font-size: 1.3rem;
-    color: #181a1a;
-    flex-shrink: 0;
+    right: 0.7rem;
+    bottom: 0.7rem;
+    font-size: 1.1rem;
   }
 }
 
