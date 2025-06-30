@@ -21,6 +21,7 @@ body {
 
 main {
     flex: 1;
+    padding-top: 56px !important;
 }
 
 /* Header Styles */
@@ -169,7 +170,7 @@ nav {
     background-color: #1a1a1a;
     position: relative;
     gap: 4rem;
-    margin-top: 220px; /* Match header height */
+    margin-top: 0 !important;
 }
 
 .hero-content {
@@ -229,7 +230,7 @@ nav {
     color: #1a1a1a;
     border: none !important;
     box-shadow: none !important;
-    margin-top: 80px !important;
+    margin-top: 0 !important;
     margin-bottom: 0 !important;
 }
 
@@ -1054,7 +1055,7 @@ footer {
     justify-content: flex-start;
     padding: 2rem 2vw 1rem 2vw;
     gap: 1.2rem;
-    margin-top: 100px;
+    margin-top: 56px;
     min-height: unset;
     background: #222 !important;
   }
