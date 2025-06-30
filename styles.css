@@ -1335,4 +1335,16 @@ footer {
   .card h3 {
     font-size: 0.9rem;
   }
+}
+
+section {
+  margin: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.hero, .description, .featured, .subscribe, .categories {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
 } 
