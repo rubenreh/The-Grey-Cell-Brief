@@ -1185,6 +1185,16 @@ footer {
     padding-bottom: 0.7rem !important;
     margin-bottom: 0.2rem !important;
   }
+  .categories {
+    padding-top: 1.2rem !important;
+    padding-bottom: 1.2rem !important;
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+  .category-icons {
+    padding-top: 0.3rem !important;
+    padding-bottom: 0.3rem !important;
+  }
 }
 
 @media (max-width: 400px) {
