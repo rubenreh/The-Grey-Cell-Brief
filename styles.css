@@ -21,7 +21,7 @@ body {
 
 main {
     flex: 1;
-    padding-top: 75px !important;
+    padding-top: 56px !important;
 }
 
 /* Header Styles */
@@ -210,12 +210,13 @@ nav {
 .cta-button, .join-button {
     background-color: #ffffff;
     color: #1a1a1a;
-    border: none;
+    border: 2px solid #d1d5db !important; /* shiny light grey */
     padding: 1rem 2rem;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(220,220,220,0.10);
 }
 
 .cta-button:hover, .join-button:hover {
