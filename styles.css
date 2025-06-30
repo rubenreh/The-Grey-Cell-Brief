@@ -208,8 +208,8 @@ nav {
 }
 
 .cta-button, .join-button {
-    background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 100%) !important;
-    color: #1a1a1a !important;
+    background: #444 !important;
+    color: #fff !important;
     border: none !important;
     padding: 1rem 2rem;
     font-size: 1rem;
