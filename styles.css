@@ -1141,7 +1141,10 @@ footer {
     background: #181a1a !important;
   }
   .featured h2 {
-    color: #222 !important;
+    font-size: 1.15rem !important;
+    margin-top: 1.1rem !important;
+    margin-bottom: 0.4rem !important;
+    font-weight: 700;
   }
   .card {
     width: 38vw !important;
