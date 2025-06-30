@@ -935,6 +935,43 @@ footer {
     }
 }
 
+/* Footer Centered Layout */
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+.footer-copyright {
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    line-height: 1.3;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+@media (max-width: 768px) {
+    .footer-center {
+        width: 100%;
+        align-items: center;
+    }
+    .footer-links {
+        width: 100%;
+        justify-content: center;
+    }
+    .footer-copyright {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /* --- IMPROVED MOBILE STYLES FOR HOMEPAGE --- */
 @media (max-width: 600px) {
   .mobile-nav {
