@@ -1064,8 +1064,11 @@ footer {
     background: #444 !important;
     color: #fff !important;
     border: none !important;
-    padding-left: 0.7rem !important;
-    padding-right: 0.7rem !important;
+    padding-left: 0.4rem !important;
+    padding-right: 0.4rem !important;
+    min-width: unset !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
   }
   .join-button {
     padding-left: 2rem !important;
