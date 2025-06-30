@@ -229,7 +229,7 @@ nav {
     color: #1a1a1a;
     border: none !important;
     box-shadow: none !important;
-    margin-top: 190px !important;
+    margin-top: 80px !important;
     margin-bottom: 0 !important;
 }
 
@@ -1210,13 +1210,7 @@ footer {
     line-height: 1.2;
   }
   .description {
-    margin-top: 1.2rem !important;
-    padding-top: 1.2rem !important;
-    margin-bottom: 1.2rem !important;
-    padding-bottom: 1.2rem !important;
-    border: none !important;
-    box-shadow: none !important;
-    background: #fff !important;
+    margin-top: 56px !important;
   }
   .main-description, .sub-description {
     margin-bottom: 0.2rem !important;
@@ -1321,6 +1315,9 @@ footer {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     line-height: 1.3;
+  }
+  .description {
+    margin-top: 80px !important;
   }
 }
 
