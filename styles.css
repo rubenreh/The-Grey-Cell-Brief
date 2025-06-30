@@ -506,106 +506,11 @@ nav {
             transform: translateX(calc(-120px * 8 - 2rem * 8));
         }
     }
-}
 
-/* Back Button Styles */
-.back-button {
-    position: absolute;
-    top: 160px; /* Match the content padding-top */
-    left: 20px;
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 1rem;
-    transition: transform 0.3s ease;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-}
-
-.back-button:hover {
-    transform: translateX(-5px);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        height: auto;
-        padding: 8px 0;
-    }
-
-    nav {
-        flex-direction: column;
-        gap: 8px;
-        padding: 4px 20px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding-bottom: 4px;
-    }
-
-    .nav-links a {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: left;
-        padding: 1rem 5%;
-        gap: 2rem;
-        margin-top: 160px; /* Further increased margin for mobile to ensure INTELLIGENCE is visible */
-        min-height: calc(100vh - 160px); /* Adjust for mobile header height */
-        justify-content: flex-start; /* Align content to top */
-    }
-
-    .hero h1 {
-        font-size: 3rem;
-    }
-
-    .hero-image {
-        margin-left: 0;
-        margin-top: 2rem;
-        width: 100%;
-        min-height: 400px;
-    }
-
-    .members-message {
-        font-size: 36px;
-        padding: 0 20px;
-    }
-
-    .main-description {
-        font-size: 1.25rem;
-    }
-
-    .card {
-        width: 300px;
-    }
-
-    .dropdown-content {
-        position: static;
-        background-color: transparent;
-        box-shadow: none;
-        border: none;
-        display: none;
-        margin-top: 0;
-        padding-left: 20px;
-    }
-
-    .dropdown.active .dropdown-content {
-        display: block;
-    }
-
-    .dropdown-content a {
-        padding: 8px 12px;
+    .cta-button {
+        background: #444 !important;
+        color: #fff !important;
+        border: none !important;
     }
 }
 
