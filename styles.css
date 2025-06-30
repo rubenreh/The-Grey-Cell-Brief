@@ -229,6 +229,8 @@ nav {
     color: #1a1a1a;
     border: none !important;
     box-shadow: none !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 .main-description {
