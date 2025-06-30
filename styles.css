@@ -21,7 +21,7 @@ body {
 
 main {
     flex: 1;
-    padding-top: 56px !important;
+    padding-top: 76px !important;
 }
 
 /* Header Styles */
@@ -208,9 +208,9 @@ nav {
 }
 
 .cta-button, .join-button {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    border: 2px solid #d1d5db !important; /* shiny light grey */
+    background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 100%) !important;
+    color: #1a1a1a !important;
+    border: none !important;
     padding: 1rem 2rem;
     font-size: 1rem;
     font-weight: 600;
