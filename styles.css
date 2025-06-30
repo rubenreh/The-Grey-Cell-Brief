@@ -169,7 +169,7 @@ nav {
     background-color: #1a1a1a;
     position: relative;
     gap: 4rem;
-    margin-top: 80px; /* Match header height */
+    margin-top: 120px; /* Match header height */
 }
 
 .hero-content {
