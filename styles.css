@@ -1061,17 +1061,9 @@ footer {
     display: none !important;
   }
   .cta-button {
-    background: #222 !important;
+    background: #444 !important;
     color: #fff !important;
-    border: none;
-    border-radius: 4px;
-    font-weight: 700;
-    box-shadow: none;
-    transition: background 0.2s;
-  }
-  .cta-button:hover, .cta-button:active, .cta-button:focus {
-    background: #333 !important;
-    color: #fff !important;
+    border: none !important;
   }
   .join-button {
     background: #222 !important;
