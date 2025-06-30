@@ -182,22 +182,9 @@ function loadAllFieldNotes() {
     });
 }
 
-// Show active users in the footer
-function showActiveUsersFooter() {
-    const footer = document.querySelector('footer .footer-content, footer');
-    if (!footer) return;
-    let activeUsersEl = document.getElementById('activeUsersFooter');
-    if (!activeUsersEl) {
-        activeUsersEl = document.createElement('div');
-        activeUsersEl.id = 'activeUsersFooter';
-        activeUsersEl.style.fontSize = '1rem';
-        activeUsersEl.style.color = '#b6c2d1';
-        activeUsersEl.style.marginTop = '0.5rem';
-        activeUsersEl.style.textAlign = 'right';
-        footer.appendChild(activeUsersEl);
-    }
-    activeUsersEl.textContent = ACTIVE_USERS > 0 ? `Active Users: ${ACTIVE_USERS}` : '';
+function toggleMobileNav() {
+    var nav = document.getElementById('mobileNav');
+    var btn = document.getElementById('hamburgerBtn');
+    nav.classList.toggle('open');
+    btn.classList.toggle('open');
 }
-
-// Run on page load
-showActiveUsersFooter(); 
