@@ -1179,6 +1179,12 @@ footer {
   .main-description, .sub-description {
     margin-bottom: 0.2rem !important;
   }
+  .subscribe {
+    padding-top: 0.7rem !important;
+    margin-top: 0.2rem !important;
+    padding-bottom: 0.7rem !important;
+    margin-bottom: 0.2rem !important;
+  }
 }
 
 @media (max-width: 400px) {
