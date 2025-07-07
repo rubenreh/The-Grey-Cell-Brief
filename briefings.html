@@ -189,6 +189,7 @@
                     card.className = 'briefing-card';
                     card.innerHTML = `
                         <h3>${note.title}</h3>
+                        <div class="subtitle">${note.subtitle || ''}</div>
                         <div class="arrow">→</div>
                     `;
                     briefingsGrid.appendChild(card);
