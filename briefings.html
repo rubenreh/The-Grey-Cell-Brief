@@ -189,11 +189,6 @@
                     card.className = 'briefing-card';
                     card.innerHTML = `
                         <h3>${note.title}</h3>
-                        <div class="date">${new Date(note.date).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric'
-                        })}</div>
                         <div class="arrow">→</div>
                     `;
                     briefingsGrid.appendChild(card);
