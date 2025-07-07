@@ -530,11 +530,13 @@ nav {
 
 /* Briefing Content Styles */
 .briefing-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 160px 20px 60px; /* Increased top padding */
-    color: #ffffff;
-    position: relative; /* For back button positioning */
+    background: #18191b;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px 0 rgba(0,0,0,0.18), 0 1.5px 6px 0 rgba(60,60,80,0.10);
+    padding: 3.5rem 3rem 3.5rem 3rem;
+    margin: 3.5rem auto;
+    max-width: 900px;
+    width: 95%;
 }
 
 .briefing-content article {
@@ -543,12 +545,15 @@ nav {
 }
 
 .briefing-content h1 {
-    font-family: 'Inter', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.2;
-    padding-left: 50px; /* Make room for back button */
+    font-size: 2.6rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 1.2rem;
+    line-height: 1.15;
+    color: #fff;
+    text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+    word-break: break-word;
+    text-align: left;
 }
 
 .briefing-meta {
@@ -616,8 +621,7 @@ nav {
 
     .briefing-content h1 {
         font-size: 2rem;
-        padding-left: 0; /* Reset padding on mobile */
-        margin-top: 30px; /* Increased space after the back button */
+        text-align: left;
     }
 
     .briefing-text h2 {
@@ -630,18 +634,22 @@ nav {
     }
 
     .back-button {
-        top: 140px; /* Increased distance from top */
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: rgba(26, 26, 26, 0.8); /* Semi-transparent background */
-        border-radius: 50%;
-        width: 44px;
-        height: 44px;
-        padding: 12px; /* Added padding for better touch target */
+        font-size: 2rem;
+        background: none;
+        border: none;
+        color: #b6c2d1;
+        cursor: pointer;
+        margin-bottom: 2rem;
+        margin-left: 0.5rem;
+        transition: color 0.2s, transform 0.2s;
+        outline: none;
+        position: relative;
+        top: 0.2em;
     }
 
     .back-button:hover {
-        transform: translateX(-50%); /* Keep centered on hover */
+        color: #fff;
+        transform: scale(1.2);
     }
 }
 
@@ -1507,4 +1515,46 @@ section {
   margin-bottom: 0 !important;
   border: none !important;
   box-shadow: none !important;
+}
+
+/* Make the back arrow button even bigger and more visually prominent */
+.briefing-content .back-button {
+  font-size: 3.2rem;
+  background: #23272f;
+  border: none;
+  color: #b6c2d1;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  margin-left: 0.5rem;
+  transition: color 0.2s, transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  position: relative;
+  top: 0.2em;
+  border-radius: 12px;
+  padding: 0.2em 0.5em 0.2em 0.4em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.briefing-content .back-button:hover {
+  color: #fff;
+  background: #313a4d;
+  transform: scale(1.15);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.18);
+}
+
+@media (max-width: 700px) {
+  .briefing-content .back-button {
+    font-size: 2.2rem;
+    padding: 0.15em 0.4em 0.15em 0.3em;
+  }
+}
+
+@media (max-width: 900px) {
+  .briefing-content {
+    padding: 2rem 1.2rem 2rem 1.2rem;
+    margin: 2rem 0.5rem;
+  }
 } 
