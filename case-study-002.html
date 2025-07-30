@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study #002 - The Israeli Mossad Dubai Hit - The Grey Cell Brief</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .page-title h1, .briefing-content h1 {
+            margin-top: 4.5rem;
+            margin-bottom: 2.2rem;
+            font-size: 2.7rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: #fff;
+            text-shadow: none;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        .back-button {
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+        }
+        
+        .back-button:hover {
+            background: linear-gradient(135deg, #a855f7, #c084fc);
+        }
+        
+        .briefing-text h3 {
+            color: #8b5cf6;
+            border-left: 4px solid #8b5cf6;
+            padding-left: 1rem;
+        }
+        
+        .briefing-text hr {
+            border-color: #8b5cf6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:38px;vertical-align:middle;margin-right:12px;display:inline-block;"> <a href="index.html" style="display:inline-block;vertical-align:middle;">THE GREY CELL BRIEF</a></div>
+            <button class="hamburger" aria-label="Open navigation menu" id="hamburgerBtn" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('members')">MEMBERS ONLY</button>
+                    <div class="mobile-dropdown-content" id="members-dropdown">
+                        <a href="investigators.html" class="mobile-dropdown-item">INVESTIGATORS</a>
+                        <a href="corporate-services.html" class="mobile-dropdown-item">CORPORATE SERVICES</a>
+                        <a href="#" onclick="event.preventDefault();" class="mobile-dropdown-item">OSINT TOOLKIT</a>
+                        <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="#" onclick="event.preventDefault();" class="mobile-dropdown-item">TRAINING & CERTIFICATION</a> CERTIFICATION</a> CERTI CERTIFICATION</a> CERTIFICATION</a>FICATION</a> CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html" class="mobile-dropdown-item">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a class="mobile-dropdown-item">SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('dossier')">THE DOSSIER</button>
+                    <div class="mobile-dropdown-content" id="dossier-dropdown">
+                        <a href="briefings.html" class="mobile-dropdown-item">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html" class="mobile-dropdown-item">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html" class="mobile-dropdown-item">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html" class="mobile-dropdown-item">Geopolitical Briefs</a>
+                        <a href="gear-tools.html" class="mobile-dropdown-item">Gear + Tools</a>
+                    </div>
+                </div>
+                <button class="mobile-nav-link" onclick="window.location.href='the-watchlist.html'">THE WATCHLIST</button>
+                <button class="mobile-nav-link" onclick="window.location.href='about.html'">ABOUT THE BRIEF</button>
+                <button class="mobile-nav-link" onclick="window.location.href='join.html'">CONTACT</button>
+            </div>
+            <div class="nav-links desktop-nav">
+                <div class="dropdown">
+                    <a href="#" class="members-link">MEMBERS ONLY</a>
+                    <div class="dropdown-content">
+                        <a href="investigators.html">INVESTIGATORS</a>
+                        <a href="corporate-services.html">CORPORATE SERVICES</a>
+                        <a href="#" onclick="event.preventDefault();">OSINT TOOLKIT</a>
+                        <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="#" onclick="event.preventDefault();">TRAINING & CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a>SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="members-link">THE DOSSIER</a>
+                    <div class="dropdown-content">
+                        <a href="briefings.html">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html">Geopolitical Briefs</a>
+                        <a href="gear-tools.html">Gear + Tools</a>
+                    </div>
+                </div>
+                <a href="the-watchlist.html">THE WATCHLIST</a>
+                <a href="about.html">ABOUT THE BRIEF</a>
+                <a href="join.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="briefing-content">
+        <button onclick="window.location.href='case-studies.html'" class="back-button">←</button>
+        <article>
+            <h1>CASE STUDY #002 – "THE ISRAELI MOSSAD DUBAI HIT"</h1>
+
+            <div class="briefing-text">
+                <p>Operation: Assassination of Mahmoud al-Mabhouh<br>
+                Location: Dubai, UAE<br>
+                Date: 19 January 2010<br>
+                Target: Mahmoud al-Mabhouh – Senior Hamas weapons procurement agent<br>
+                Attributed Agency: Mossad (unofficial)</p>
+
+                <hr>
+
+                <h3>EXECUTIVE SUMMARY</h3>
+                
+                <p>Mahmoud al-Mabhouh was tracked, surveilled, and neutralized in his Dubai hotel room via a quiet, non-invasive method (suspected paralysis followed by suffocation). The operation was complex, multilayered, and bold, executed in a modern surveillance state where Dubai police later pieced together 27 suspects using CCTV.</p>
+                <p>Despite the later exposure, the op achieved its primary objective: surgical removal of a weapons trafficker responsible for Iranian–Hamas arms supply chains.</p>
+
+                <hr>
+
+                <h3>BACKGROUND</h3>
+                
+                <p>al-Mabhouh had long been a target of Israeli intelligence due to his central role in smuggling weapons from Iran into Gaza. His previous arrests and known aliases made travel predictable, creating opportunity. Dubai was seen as a semi-permissive environment, flush with luxury hotels and international traffic—ideal for covert transit and ops concealment.</p>
+
+                <hr>
+
+                <h3>METHODOLOGY</h3>
+                
+                <p>Operatives followed a three-phase model: infiltration and identity concealment, surveillance and normalization, followed by execution and rapid exfiltration.</p>
+                
+                <ul>
+                    <li><strong>Infiltration & Cover Identity:</strong> Operatives used real passports under false identities, entered on staggered timelines, and assumed harmless tourist/business profiles.</li>
+                    <li><strong>Surveillance:</strong> The target's habits and routes were known. Operatives blended into his environment using mirrored hotel bookings and behavioral mimicry.</li>
+                    <li><strong>Execution & Exit:</strong> Entry into al-Mabhouh's room showed evidence of keycard tampering. He was likely paralyzed before suffocation. Exfiltration occurred swiftly post-op.</li>
+                </ul>
+
+                <hr>
+
+                <h3>ANALYSIS</h3>
+                
+                <p>The team executed flawlessly on a tactical level—no struggle, no mess, immediate exit. But Dubai's advanced surveillance and synchronized timestamp systems retroactively unspooled the network's movement. Operational security failed in the assumption that physical anonymity could beat digital footprint analysis. The use of multiple Western passports invited scrutiny. Strategic success came at the cost of diplomatic exposure.</p>
+
+                <hr>
+
+                <h3>LESSONS LEARNED</h3>
+                
+                <p>Key insights and takeaways from this case study:</p>
+                
+                <ul>
+                    <li>CCTV is not your friend. Blending in is not enough—anticipate forensic video review.</li>
+                    <li>Deep cover is essential. One-time-use teams risk retroactive exposure via document tracing.</li>
+                    <li>Physical deception still trumps tech. Human misdirection must match digital discipline.</li>
+                    <li>Every high-tech city requires an exfil/media suppression plan. Tactical wins can be undone by press cycles.</li>
+                </ul>
+
+                <hr>
+
+                <h3>APPLICATIONS</h3>
+                
+                <p>Future urban operations must incorporate real-time media and surveillance response plans. Misattributed passports now generate international manhunts. Operatives must blend at the algorithmic level—predictive movement, biometric trail management, and social media blindspots are the new frontier.</p>
+
+                <hr>
+
+                <p><strong>GREY CELL BRIEF: STRATEGIC TAKEAWAY</strong><br>
+                The mission achieved its aim, one less arms broker on the field. But it foreshadowed the death of the "invisible era" of spycraft. In a world of biometric dragnet surveillance, the real art is not vanishing, it's misdirecting the algorithm.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-brand"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:24px;vertical-align:middle;margin-right:8px;display:inline-block;"> THE GREY CELL BRIEF</div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy & Terms of Use</a>
+                </div>
+                <div class="footer-copyright">
+                    <span>&copy; 2025 The Grey Cell<br>Brief. All rights reserved.</span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/greycellbrief" aria-label="Twitter" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/greycellbrief" aria-label="Instagram" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleMobileDropdown(type) {
+            const dropdownContent = document.getElementById(`${type}-dropdown`);
+            const toggleButton = document.querySelector(`.mobile-dropdown-toggle[onclick*="${type}"]`);
+            dropdownContent.classList.toggle('open');
+            toggleButton.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

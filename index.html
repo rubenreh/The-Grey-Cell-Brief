@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grey Cell Brief</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <!-- Add Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCl4-CR0cDcInzgWnGJMPDHbBn6L1bWlRs",
+        authDomain: "grey-cell-brief.firebaseapp.com",
+        projectId: "grey-cell-brief",
+        storageBucket: "grey-cell-brief.firebasestorage.app",
+        messagingSenderId: "479300831529",
+        appId: "1:479300831529:web:b295eb7803433fa69acf38",
+        measurementId: "G-6GCYXKL6N0"
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:38px;vertical-align:middle;margin-right:12px;display:inline-block;"> <a href="index.html" style="display:inline-block;vertical-align:middle;">THE GREY CELL BRIEF</a></div>
+            <button class="hamburger" aria-label="Open navigation menu" id="hamburgerBtn" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('members')">MEMBERS ONLY</button>
+                    <div class="mobile-dropdown-content" id="members-dropdown">
+                        <a href="investigators.html" class="mobile-dropdown-item">INVESTIGATORS</a>
+                        <a href="corporate-services.html" class="mobile-dropdown-item">CORPORATE SERVICES</a>
+                        <a href="#" class="mobile-dropdown-item" onclick="event.preventDefault();">OSINT TOOLKIT</a>
+                        <a href="training-certification.html" class="mobile-dropdown-item">TRAINING & CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html" class="mobile-dropdown-item">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a class="mobile-dropdown-item">SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('dossier')">THE DOSSIER</button>
+                    <div class="mobile-dropdown-content" id="dossier-dropdown">
+                        <a href="briefings.html" class="mobile-dropdown-item">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html" class="mobile-dropdown-item">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html" class="mobile-dropdown-item">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html" class="mobile-dropdown-item">Geopolitical Briefs</a>
+                        <a class="mobile-dropdown-item">Gear + Tools</a>
+                    </div>
+                </div>
+                <button class="mobile-nav-link" onclick="window.location.href='the-watchlist.html'">THE WATCHLIST</button>
+                <button class="mobile-nav-link" onclick="window.location.href='about.html'">ABOUT THE BRIEF</button>
+                <button class="mobile-nav-link" onclick="window.location.href='join.html'">CONTACT</button>
+            </div>
+            <div class="nav-links desktop-nav">
+                <div class="dropdown">
+                    <a href="#" class="members-link">MEMBERS ONLY</a>
+                    <div class="dropdown-content">
+                        <a href="investigators.html">INVESTIGATORS</a>
+                        <a href="corporate-services.html">CORPORATE SERVICES</a>
+                        <a href="#" onclick="event.preventDefault();">OSINT TOOLKIT</a>
+                        <a href="training-certification.html">TRAINING & CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a>SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="members-link">THE DOSSIER</a>
+                    <div class="dropdown-content">
+                        <a href="briefings.html">TRADECRAFT & FIELD TACTICS</a>
+                        <a href="case-studies.html">CASE STUDIES & ANALYSIS</a>
+                        <a href="operational-strategy.html">OPERATIONAL STRATEGY</a>
+                        <a href="geopolitical-briefs.html">GEOPOLITICAL BRIEFS</a>
+                        <a>GEAR & TOOLS</a>
+                    </div>
+                </div>
+                <a href="the-watchlist.html">THE WATCHLIST</a>
+                <a href="about.html">ABOUT THE BRIEF</a>
+                <a href="join.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image"></div>
+            <div class="hero-content">
+                <h1>
+                    INTELLIGENCE.<br>
+                    TRADECRAFT.<br>
+                    RISK.<br>
+                    - WITHOUT THE NOISE.
+                </h1>
+            </div>
+        </section>
+
+        <section id="about" class="description">
+            <p class="main-description">The Grey Cell Brief delivers daily insights drawn from experience in intelligence, operational strategy, and security consulting.</p>
+            <p class="sub-description">It's not journalism. It's what professionals read when it matters.</p>
+        </section>
+
+        <section id="briefings" class="featured">
+            <h2>Featured Briefings</h2>
+            <div class="briefing-cards" id="briefingCards">
+                <!-- Field notes will be loaded here -->
+            </div>
+        </section>
+
+        <section id="join" class="subscribe">
+            <div class="subscribe-content">
+                <h2>WANT BRIEFINGS FROM THE FIELD?<br>GET WEEKLY DROPS, ZERO SPAM.</h2>
+                <button onclick="window.location.href='join.html'" class="join-button">JOIN THE BRIEF</button>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="category-carousel">
+                <div class="category-icons">
+                    <div class="category">
+                        <div class="icon surveillance"></div>
+                        <span>SURVEILLANCE</span>
+                    </div>
+                    <div class="category">
+                        <div class="icon corporate"></div>
+                        <span>CORPORATE INTELLIGENCE</span>
+                    </div>
+                    <div class="category">
+                        <div class="icon threat"></div>
+                        <span>THREAT RECOGNITION</span>
+                    </div>
+                    <div class="category">
+                        <div class="icon operational"></div>
+                        <span>OPERATIONAL PLANNING</span>
+                    </div>
+                    <div class="category">
+                        <div class="icon countermeasures"></div>
+                        <span>COUNTERMEASURES</span>
+                    </div>
+                    <div class="category">
+                        <div class="icon psychology"></div>
+                        <span>FIELD PSYCHOLOGY</span>
+                    </div>
+                    <div class="category">
+                        <div class="icon digital"></div>
+                        <span>DIGITAL FORENSICS</span>
+                    </div>
+                    <div class="category">
+                        <div class="icon risk"></div>
+                        <span>RISK ASSESSMENT</span>
+                    </div>
+                    <!-- Duplicate items for seamless loop -->
+                    <div class="category">
+                        <div class="icon surveillance"></div>
+                        <span>SURVEILLANCE</span>
+                    </div>
+                    <div class="category">
+                        <div class="icon corporate"></div>
+                        <span>CORPORATE INTELLIGENCE</span>
+                    </div>
+                    <div class="category">
+                        <div class="icon threat"></div>
+                        <span>THREAT RECOGNITION</span>
+                    </div>
+                    <div class="category">
+                        <div class="icon operational"></div>
+                        <span>OPERATIONAL PLANNING</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-brand"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" class="footer-logo" style="max-height:24px;margin-right:8px;display:inline-block;"> THE GREY CELL BRIEF</div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy & Terms of Use</a>
+                </div>
+                <div class="footer-copyright">
+                    <span>&copy; 2025 The Grey Cell<br>Brief. All rights reserved.</span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/greycellbrief" aria-label="Twitter" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/greycellbrief" aria-label="Instagram" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z"/>
+                        <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Load field notes from JSON file
+        async function loadFieldNotes() {
+            try {
+                const response = await fetch('field-notes-list.json');
+                const fieldNotes = await response.json();
+                const briefingCards = document.getElementById('briefingCards');
+                briefingCards.innerHTML = '';
+                
+                // Sort field notes by date (newest first)
+                fieldNotes.sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                // Only take the 6 most recent field notes
+                const recentNotes = fieldNotes.slice(0, 6);
+                
+                recentNotes.forEach((note) => {
+                    const card = document.createElement('a');
+                    card.href = note.file + '?source=home';
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <h3>${note.title}</h3>
+                        <div class="arrow">→</div>
+                    `;
+                    briefingCards.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error loading field notes:', error);
+            }
+        }
+
+        // Load field notes when the page loads
+        document.addEventListener('DOMContentLoaded', loadFieldNotes);
+
+        function toggleMobileNav() {
+            var nav = document.getElementById('mobileNav');
+            var btn = document.getElementById('hamburgerBtn');
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+        }
+
+        function toggleMobileDropdown(type) {
+            const dropdownContent = document.getElementById(`${type}-dropdown`);
+            const toggleButton = document.querySelector(`.mobile-dropdown-toggle[onclick*="${type}"]`);
+            dropdownContent.classList.toggle('open');
+            toggleButton.classList.toggle('open');
+        }
+    </script>
+    <style>
+.logo img, .footer-logo, .footer-brand img {
+  transform: none !important;
+  rotate: none !important;
+}
+</style>
+</body>
+</html> 

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grey Cell Brief</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:38px;vertical-align:middle;margin-right:12px;display:inline-block;"> <a href="index.html" style="display:inline-block;vertical-align:middle;">THE GREY CELL BRIEF</a></div>
+            <button class="hamburger" aria-label="Open navigation menu" id="hamburgerBtn" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('members')">MEMBERS ONLY</button>
+                    <div class="mobile-dropdown-content" id="members-dropdown">
+                        <a href="investigators.html" class="mobile-dropdown-item">INVESTIGATORS</a>
+                        <a href="corporate-services.html" class="mobile-dropdown-item">CORPORATE SERVICES</a>
+                        <a href="#" onclick="event.preventDefault();" class="mobile-dropdown-item">OSINT TOOLKIT</a>
+                        <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="#" onclick="event.preventDefault();" class="mobile-dropdown-item">TRAINING & CERTIFICATION</a> CERTIFICATION</a> CERTI CERTIFICATION</a> CERTIFICATION</a>FICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html" class="mobile-dropdown-item">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a class="mobile-dropdown-item">SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('dossier')">THE DOSSIER</button>
+                    <div class="mobile-dropdown-content" id="dossier-dropdown">
+                        <a href="briefings.html" class="mobile-dropdown-item">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html" class="mobile-dropdown-item">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html" class="mobile-dropdown-item">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html" class="mobile-dropdown-item">Geopolitical Briefs</a>
+                        <a class="mobile-dropdown-item">Gear + Tools</a>
+                    </div>
+                </div>
+                <button class="mobile-nav-link" onclick="window.location.href='the-watchlist.html'">THE WATCHLIST</button>
+                <button class="mobile-nav-link" onclick="window.location.href='about.html'">ABOUT THE BRIEF</button>
+                <button class="mobile-nav-link" onclick="window.location.href='join.html'">CONTACT</button>
+            </div>
+            <div class="nav-links desktop-nav">
+                <div class="dropdown">
+                    <a href="#" class="members-link">MEMBERS ONLY</a>
+                    <div class="dropdown-content">
+                        <a href="investigators.html">INVESTIGATORS</a>
+                        <a href="corporate-services.html">CORPORATE SERVICES</a>
+                        <a href="#" onclick="event.preventDefault();">OSINT TOOLKIT</a>
+                        <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="#" onclick="event.preventDefault();">TRAINING & CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a>SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="members-link">THE DOSSIER</a>
+                    <div class="dropdown-content">
+                        <a href="briefings.html">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html">Geopolitical Briefs</a>
+                        <a>Gear + Tools</a>
+                    </div>
+                </div>
+                <a href="the-watchlist.html">THE WATCHLIST</a>
+                <a href="about.html">ABOUT THE BRIEF</a>
+                <a href="join.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+    <main class="page-content" style="max-width: 700px; margin: 100px auto 2rem auto; padding: 2rem 1rem; background: #181a1a; border-radius: 10px; color: #fff;">
+        <h1 style="font-size:2rem; font-weight:800; margin-bottom:1.5rem; text-align:center;">Privacy Policy & Terms of Use</h1>
+        <p>The Grey Cell Brief (“we”, “us”, or “our”) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website [www.thegreycellbrief.com] (the “Site”).</p>
+        <hr style="margin:2rem 0; border: none; border-top: 1px solid #444;">
+        <h2>1. Information We Collect</h2>
+        <p><b>a. Personal Information</b><br>When you voluntarily subscribe to our newsletter, contact us, or submit a form, we may collect your name, email address, and any other information you provide.</p>
+        <p><b>b. Usage Data</b><br>We may automatically collect certain information when you visit the Site, such as your IP address, browser type, referring URL, pages visited, and the date/time of your visit.</p>
+        <p><b>c. Cookies and Tracking Technologies</b><br>We may use cookies or similar tracking technologies to enhance your experience on the Site. You can adjust your browser settings to refuse cookies, but this may limit some functionalities.</p>
+        <hr style="margin:2rem 0; border: none; border-top: 1px solid #444;">
+        <h2>2. How We Use Your Information</h2>
+        <ul style="margin-left:1.5rem;">
+            <li>Provide and improve the content and user experience</li>
+            <li>Respond to your inquiries</li>
+            <li>Send newsletters or updates (if you opt in)</li>
+            <li>Analyze website traffic and usage trends</li>
+        </ul>
+        <hr style="margin:2rem 0; border: none; border-top: 1px solid #444;">
+        <h2>3. Sharing Your Information</h2>
+        <p>We do not sell or trade your personal information. We may share data with trusted third-party services (e.g., email providers, analytics tools) only to the extent necessary to operate the Site and improve services.</p>
+        <p>We may also disclose your information if required by law or to protect our rights.</p>
+        <hr style="margin:2rem 0; border: none; border-top: 1px solid #444;">
+        <h2>4. Data Storage and Security</h2>
+        <p>Your data may be stored on secure servers through our hosting and email service providers. We implement reasonable physical, administrative, and technical safeguards to protect your data, but no system is completely secure.</p>
+        <hr style="margin:2rem 0; border: none; border-top: 1px solid #444;">
+        <h2>5. Your Rights and Choices</h2>
+        <ul style="margin-left:1.5rem;">
+            <li>Access the personal data we hold about you</li>
+            <li>Request correction or deletion</li>
+            <li>Withdraw consent for future communications</li>
+        </ul>
+        <p>Depending on your jurisdiction (e.g., Canada, EU, California), you may have these rights. To make a request, contact us at: <a href="mailto:info@thegreycellbrief.com" style="color:#b6c2d1;">info@thegreycellbrief.com</a></p>
+        <hr style="margin:2rem 0; border: none; border-top: 1px solid #444;">
+        <h2>6. Third-Party Links</h2>
+        <p>This Site may contain links to external websites. We are not responsible for the privacy practices of those sites.</p>
+        <hr style="margin:2rem 0; border: none; border-top: 1px solid #444;">
+        <h2>7. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with the “Last updated” date above.</p>
+        <hr style="margin:2rem 0; border: none; border-top: 1px solid #444;">
+        <h2>8. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy, please contact:<br><a href="mailto:info@thegreycellbrief.com" style="color:#b6c2d1;">info@thegreycellbrief.com</a></p>
+        <hr style="margin:2rem 0; border: none; border-top: 2px solid #888;">
+        <h1 style="font-size:1.5rem; font-weight:800; margin-bottom:1.2rem; text-align:center;">Terms of Use</h1>
+        <div style="font-size:1rem; color:#eee;">
+        <p>Welcome to The Grey Cell Brief (the “Site”), owned and operated by The Grey Cell Brief (“we”, “us”, “our”).</p>
+        <p>By accessing or using this Site, you agree to these Terms of Use and our <a href="#" style="color:#b6c2d1; text-decoration:underline;">Privacy Policy</a>. If you do not agree, please do not use the Site.</p>
+        <h2>1. Intellectual Property & Copyright</h2>
+        <p>All content on this Site, including but not limited to articles, images, graphics, branding, logos, and layout, is the property of The Grey Cell Brief or its respective content creators and is protected by copyright, trademark, and other intellectual property laws.</p>
+        <p>You may not reproduce, distribute, modify, or republish any content without prior written permission. Limited personal use, such as quoting with proper credit and a link back, is permitted.</p>
+        <p>©️ 2025 The Grey Cell Brief. All rights reserved.</p>
+        <h2>2. User Conduct</h2>
+        <p>By using this Site, you agree not to:</p>
+        <ul style="margin-left:1.5rem;">
+            <li>Use the content or data for commercial gain without permission</li>
+            <li>Attempt to access restricted areas of the Site</li>
+            <li>Engage in data scraping, crawling, or mass copying of content</li>
+            <li>Post or transmit harmful or unlawful content through contact forms or comments</li>
+        </ul>
+        <p>We reserve the right to block access, remove content, or report unlawful behavior.</p>
+        <h2>3. Newsletter and Subscriptions</h2>
+        <p>If you subscribe to our newsletter or updates, you agree to receive occasional emails. You can unsubscribe at any time. We never sell your personal information. (See our <a href="#" style="color:#b6c2d1; text-decoration:underline;">Privacy Policy</a> for full details.)</p>
+        <h2>4. Disclaimers</h2>
+        <p>All content on The Grey Cell Brief is provided for informational and educational purposes only. While we strive for accuracy, we make no warranties about the completeness or reliability of the content. Use of the Site and its information is at your own risk.</p>
+        <p>This Site may occasionally discuss security, intelligence, or investigative topics. Nothing on this Site constitutes legal, security, or professional advice.</p>
+        <h2>5. Limitation of Liability</h2>
+        <p>To the fullest extent permitted by law, we shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of or inability to use the Site.</p>
+        <h2>6. External Links</h2>
+        <p>The Site may link to third-party websites. We are not responsible for the content, policies, or practices of those external sites.</p>
+        <h2>7. Changes to These Terms</h2>
+        <p>We may update these Terms from time to time. By continuing to use the Site after changes are posted, you accept the revised Terms.</p>
+        <h2>8. Governing Law</h2>
+        <p>These Terms are governed by the laws of the Province of Ontario and the federal laws of Canada.</p>
+        <p style="margin-top:2rem; text-align:center; color:#b6c2d1;">Privacy Policy | Terms of Use | ©️ The Grey Cell Brief 2025</p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-brand"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:24px;vertical-align:middle;margin-right:8px;display:inline-block;"> THE GREY CELL BRIEF</div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy & Terms of Use</a>
+                </div>
+                <div class="footer-copyright">
+                    <span>&copy; 2025 The Grey Cell<br>Brief. All rights reserved.</span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/greycellbrief" aria-label="Twitter" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/greycellbrief" aria-label="Instagram" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function toggleMobileDropdown(type) {
+            const dropdownContent = document.getElementById(`${type}-dropdown`);
+            const toggleButton = document.querySelector(`.mobile-dropdown-toggle[onclick*="${type}"]`);
+            dropdownContent.classList.toggle('open');
+            toggleButton.classList.toggle('open');
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grey Cell Brief</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+.page-title h1, .briefing-content h1 {
+    margin-top: 4.5rem;
+    margin-bottom: 2.2rem;
+    font-size: 2.7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:38px;vertical-align:middle;margin-right:12px;display:inline-block;"> <a href="index.html" style="display:inline-block;vertical-align:middle;">THE GREY CELL BRIEF</a></div>
+            <button class="hamburger" aria-label="Open navigation menu" id="hamburgerBtn" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('members')">MEMBERS ONLY</button>
+                    <div class="mobile-dropdown-content" id="members-dropdown">
+                        <a href="investigators.html" class="mobile-dropdown-item">INVESTIGATORS</a>
+                        <a href="corporate-services.html" class="mobile-dropdown-item">CORPORATE SERVICES</a>
+                        <a href="osint-toolkit.html" class="mobile-dropdown-item">OSINT TOOLKIT</a>
+                        <a href="training-certification.html" class="mobile-dropdown-item">TRAINING & CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html" class="mobile-dropdown-item">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a class="mobile-dropdown-item">SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('dossier')">THE DOSSIER</button>
+                    <div class="mobile-dropdown-content" id="dossier-dropdown">
+                        <a href="briefings.html" class="mobile-dropdown-item">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html" class="mobile-dropdown-item">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html" class="mobile-dropdown-item">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html" class="mobile-dropdown-item">Geopolitical Briefs</a>
+                        <a class="mobile-dropdown-item">Gear + Tools</a>
+                    </div>
+                </div>
+                <button class="mobile-nav-link" onclick="window.location.href='the-watchlist.html'">THE WATCHLIST</button>
+                <button class="mobile-nav-link" onclick="window.location.href='about.html'">ABOUT THE BRIEF</button>
+                <button class="mobile-nav-link" onclick="window.location.href='join.html'">CONTACT</button>
+            </div>
+            <div class="nav-links desktop-nav">
+                <div class="dropdown">
+                    <a href="#" class="members-link">MEMBERS ONLY</a>
+                    <div class="dropdown-content">
+                        <a href="investigators.html">INVESTIGATORS</a>
+                        <a href="corporate-services.html">CORPORATE SERVICES</a>
+                        <a href="osint-toolkit.html">OSINT TOOLKIT</a>
+                        <a href="training-certification.html">TRAINING & CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a>SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="members-link">THE DOSSIER</a>
+                    <div class="dropdown-content">
+                        <a href="briefings.html">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html">Geopolitical Briefs</a>
+                        <a>Gear + Tools</a>
+                    </div>
+                </div>
+                <a href="the-watchlist.html">THE WATCHLIST</a>
+                <a href="about.html">ABOUT THE BRIEF</a>
+                <a href="join.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+    <main class="briefing-content">
+        <button onclick="window.location.href='the-watchlist.html'" class="back-button">←</button>
+        <article>
+            <h1 style="color:#4a8a5a">CSIS PUBLIC REPORT 2024 RELEASE</h1>
+            <div class="briefing-text">
+                <h2>Statement from CSIS Director Dan Rogers</h2>
+                <p>Ottawa, Ontario (June 18, 2025) – The Director of the Canadian Security Intelligence Service (CSIS), Dan Rogers, issued the following statement:</p>
+                <p>“I am pleased to release the CSIS Public Report 2024. This comprehensive report marks CSIS’ 40th anniversary and provides an overview of the changing national security landscape in Canada. It also provides detailed insight into how CSIS has evolved, and how we continue to respond to the changing threat environment today.</p>
+                <hr>
+                <h3>1. Foreign Interference & Threat Evolution</h3>
+                <p>In 2024, threats from hostile state actors increased in complexity. Foreign nations sought to undermine Canada’s security, economic prosperity, and democracy through interference, coercion, and espionage. States also leveraged organized crime to repress legitimate speech and conduct threat activities.</p>
+                <hr>
+                <h3>2. Terrorism Trends & Arrests</h3>
+                <p>Two major terrorism-related arrests disrupted planned attacks. Canada’s terrorism threat level remains medium, due to effective mitigation strategies, yet the evolving nature of the threat remains a concern.</p>
+                <hr>
+                <h3>3. Electoral Interference Inquiry Support</h3>
+                <p>Throughout 2024, CSIS supported the Public Inquiry into Foreign Interference in Federal Electoral Processes (PIFI) by providing documents and expert testimony. Steps are being taken to address the Commission’s findings, particularly in intelligence dissemination.</p>
+                <hr>
+                <h3>4. Legislative Reform – Bill C-70</h3>
+                <p>Bill C-70 significantly modernized the CSIS Act for the first time since 1984, expanding operational authority and stakeholder engagement. CSIS has since issued 28 resiliency disclosures to non-governmental partners, including provincial and private sector organizations.</p>
+                <hr>
+                <h3>5. Strategic National Partnerships</h3>
+                <p>CSIS emphasized Canada’s international role in security and intelligence, reinforcing ties with Indo-Pacific, European, and Arctic allies amid escalating geopolitical pressures.</p>
+                <hr>
+                <p>The CSIS Public Report 2024 affirms the organization’s commitment to transparency, modernization, and safeguarding Canada’s interests through informed, decisive intelligence operations.</p>
+                <p style="font-size: 0.85rem; color: #888; margin-top: 2rem;">Brief ID: #GCB-0625-WL-CSIS | Issued: June 18, 2025</p>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-brand"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:24px;vertical-align:middle;margin-right:8px;display:inline-block;"> THE GREY CELL BRIEF</div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy & Terms of Use</a>
+                </div>
+                <div class="footer-copyright">
+                    <span>&copy; 2025 The Grey Cell<br>Brief. All rights reserved.</span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/greycellbrief" aria-label="Twitter" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://instagram.com/greycellbrief" aria-label="Instagram" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function toggleMobileDropdown(type) {
+            const dropdownContent = document.getElementById(`${type}-dropdown`);
+            const toggleButton = document.querySelector(`.mobile-dropdown-toggle[onclick*="${type}"]`);
+            const isOpen = dropdownContent.classList.toggle('open');
+            toggleButton.classList.toggle('open');
+            toggleButton.setAttribute('aria-expanded', isOpen);
+        }
+    </script>
+</body>
+</html>

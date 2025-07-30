@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIELD NOTE #007 - The Grey Cell Brief</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:38px;vertical-align:middle;margin-right:12px;display:inline-block;"> <a href="index.html" style="display:inline-block;vertical-align:middle;">THE GREY CELL BRIEF</a></div>
+            <button class="hamburger" aria-label="Open navigation menu" id="hamburgerBtn" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('members')">MEMBERS ONLY</button>
+                    <div class="mobile-dropdown-content" id="members-dropdown">
+                        <a href="investigators.html" class="mobile-dropdown-item">INVESTIGATORS</a>
+                        <a href="corporate-services.html" class="mobile-dropdown-item">CORPORATE SERVICES</a>
+                        <a href="#" onclick="event.preventDefault();" class="mobile-dropdown-item">OSINT TOOLKIT</a>
+                        <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="#" onclick="event.preventDefault();" class="mobile-dropdown-item">TRAINING & CERTIFICATION</a> CERTIFICATION</a> CERTI CERTIFICATION</a> CERTIFICATION</a>FICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html" class="mobile-dropdown-item">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a class="mobile-dropdown-item">SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('dossier')">THE DOSSIER</button>
+                    <div class="mobile-dropdown-content" id="dossier-dropdown">
+                        <a href="briefings.html" class="mobile-dropdown-item">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html" class="mobile-dropdown-item">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html" class="mobile-dropdown-item">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html" class="mobile-dropdown-item">Geopolitical Briefs</a>
+                        <a class="mobile-dropdown-item">Gear + Tools</a>
+                    </div>
+                </div>
+                <button class="mobile-nav-link" onclick="window.location.href='the-watchlist.html'">THE WATCHLIST</button>
+                <button class="mobile-nav-link" onclick="window.location.href='about.html'">ABOUT THE BRIEF</button>
+                <button class="mobile-nav-link" onclick="window.location.href='join.html'">CONTACT</button>
+            </div>
+            <div class="nav-links desktop-nav">
+                <div class="dropdown">
+                    <a href="#" class="members-link">MEMBERS ONLY</a>
+                    <div class="dropdown-content">
+                        <a href="investigators.html">INVESTIGATORS</a>
+                        <a href="corporate-services.html">CORPORATE SERVICES</a>
+                        <a href="#" onclick="event.preventDefault();">OSINT TOOLKIT</a>
+                        <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="#" onclick="event.preventDefault();">TRAINING & CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a>SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="members-link">THE DOSSIER</a>
+                    <div class="dropdown-content">
+                        <a href="briefings.html">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html">Geopolitical Briefs</a>
+                        <a>Gear + Tools</a>
+                    </div>
+                </div>
+                <a href="the-watchlist.html">THE WATCHLIST</a>
+                <a href="about.html">ABOUT THE BRIEF</a>
+                <a href="join.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="briefing-content">
+        <button onclick="window.location.href='index.html#briefings'" class="back-button">←</button>
+        <article>
+            <h1>FIELD NOTE 007</h1>
+
+            <div class="briefing-text">
+                <h2>Tactical Disengagement: Knowing When to Pull Out Before You’re Burned</h2>
+                <p><em>“Discipline isn’t staying on target. It’s knowing when the target isn’t worth staying on.”</em></p>
+                <hr>
+                <p>Most operators are trained how to follow, close gaps, and extract intel.</p>
+                <p>But fewer are trained in the one move that keeps you in the game long-term:</p>
+                <p><strong>Disengagement.</strong><br>Not the coward’s move.<br>Not the failed mission.</p>
+                <p>The controlled shutdown. The silent exit. The decision to survive.</p>
+                <p>Disengagement is what separates the operator who works another day…<br>from the one who gets burned, and doesn’t see it coming.</p>
+                <hr>
+                <h3>WHY DISENGAGEMENT IS A SKILL</h3>
+                <p>Anyone can follow.<br>But to disengage cleanly, with no tails, no tells, and no blowback, takes precision, timing, and ego control.</p>
+                <p>Too often, an op turns sideways because:</p>
+                <ul>
+                    <li>The operator stayed five minutes too long</li>
+                    <li>Ignored one too many signals</li>
+                    <li>Let emotion or pride overtake the plan</li>
+                </ul>
+                <p>You don’t win by chasing.<br>You win by knowing when you’ve seen enough, and how to disappear without a trace.</p>
+                <hr>
+                <h3>6 SIGNS IT’S TIME TO PULL OUT</h3>
+                <ul>
+                    <li><strong>Pattern Disruption by the Subject</strong><br>They suddenly deviate without context, unnecessary turns, route reversals, time delays. You’re not chasing. You’re being tested.</li>
+                    <li><strong>Mirrored Movement</strong><br>They pause when you pause. They adjust pace with yours. You’re inside their field of suspicion.</li>
+                    <li><strong>Environmental Shift</strong><br>Too quiet. Too empty. Or too suddenly crowded. You’ve been led into a trap zone.</li>
+                    <li><strong>Technology Behavior Changes</strong><br>They begin using their phone in odd ways, taking photos of nothing, or angling it subtly toward their rear view. They may be recording or transmitting a surveillance check.</li>
+                    <li><strong>Your Internal Clock is Off</strong><br>Fatigue. Tunnel vision. Overfocus. The moment your instincts lag, you’re on borrowed time.</li>
+                    <li><strong>You’re Forcing the Op</strong><br>You’ve stopped gathering intelligence and started chasing ego. You’ve already lost tactical value.</li>
+                </ul>
+                <hr>
+                <h3>HOW TO DISENGAGE, SILENTLY AND CLEANLY</h3>
+                <ul>
+                    <li><strong>1. Kill the Pattern</strong><br>Immediately break your rhythm, change pace, cross streets, or pause with purpose (tie a shoe, adjust gear). Blend out, not in.</li>
+                    <li><strong>2. Use a Neutral Exit Vector</strong><br>Never leave in a direct line from the subject’s route. Shift sideways, into traffic, through shops, or behind static cover zones.</li>
+                    <li><strong>3. Create a Visual Block Before Separation</strong><br>Use elevators, escalators, alleyways, or crowd formations to disappear behind visual walls. If you fade without a visible reason, it creates suspicion. If you use momentum masking, you vanish naturally.</li>
+                    <li><strong>4. Communicate Smartly (if part of a team)</strong><br>Say only what’s necessary:<br>"Disengaging. No tails. Repositioning for later contact."<br>No emotion. No blame. No analysis in the moment.</li>
+                    <li><strong>5. Debrief Later, Not While Moving</strong><br>Never dissect the pullout while you’re still vulnerable. Get clear. Get neutral. Then evaluate.</li>
+                </ul>
+                <hr>
+                <h3>GREY CELL REFLECTION</h3>
+                <p>Disengagement is not retreat.<br>It’s an investment in future advantage.</p>
+                <p>When done right:</p>
+                <ul>
+                    <li>The subject never knew you were there</li>
+                    <li>Your op remains intact</li>
+                    <li>You live to run the second pass, smarter, sharper, undetected</li>
+                </ul>
+                <p><strong>“Some of the most successful operations ended with a quiet exit, not a headline.”</strong></p>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-brand"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:24px;vertical-align:middle;margin-right:8px;display:inline-block;"> THE GREY CELL BRIEF</div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy & Terms of Use</a>
+                </div>
+                <div class="footer-copyright">
+                    <span>&copy; 2025 The Grey Cell<br>Brief. All rights reserved.</span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/greycellbrief" aria-label="Twitter" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/greycellbrief" aria-label="Instagram" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleMobileDropdown(type) {
+            const dropdownContent = document.getElementById(`${type}-dropdown`);
+            const toggleButton = document.querySelector(`.mobile-dropdown-toggle[onclick*="${type}"]`);
+            dropdownContent.classList.toggle('open');
+            toggleButton.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

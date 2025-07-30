@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study #001 - Corporate Espionage: The Inside Job - The Grey Cell Brief</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .page-title h1, .briefing-content h1 {
+            margin-top: 4.5rem;
+            margin-bottom: 2.2rem;
+            font-size: 2.7rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: #fff;
+            text-shadow: none;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        .back-button {
+            background: linear-gradient(135deg, #8b5cf6, #a855f7);
+        }
+        
+        .back-button:hover {
+            background: linear-gradient(135deg, #a855f7, #c084fc);
+        }
+        
+        .briefing-text h3 {
+            color: #8b5cf6;
+            border-left: 4px solid #8b5cf6;
+            padding-left: 1rem;
+        }
+        
+        .briefing-text hr {
+            border-color: #8b5cf6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:38px;vertical-align:middle;margin-right:12px;display:inline-block;"> <a href="index.html" style="display:inline-block;vertical-align:middle;">THE GREY CELL BRIEF</a></div>
+            <button class="hamburger" aria-label="Open navigation menu" id="hamburgerBtn" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('members')">MEMBERS ONLY</button>
+                    <div class="mobile-dropdown-content" id="members-dropdown">
+                        <a href="investigators.html" class="mobile-dropdown-item">INVESTIGATORS</a>
+                        <a href="corporate-services.html" class="mobile-dropdown-item">CORPORATE SERVICES</a>
+                        <a href="#" onclick="event.preventDefault();" class="mobile-dropdown-item">OSINT TOOLKIT</a>
+                        <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="#" onclick="event.preventDefault();" class="mobile-dropdown-item">TRAINING & CERTIFICATION</a> CERTIFICATION</a> CERTI CERTIFICATION</a> CERTIFICATION</a>FICATION</a> CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html" class="mobile-dropdown-item">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a class="mobile-dropdown-item">SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('dossier')">THE DOSSIER</button>
+                    <div class="mobile-dropdown-content" id="dossier-dropdown">
+                        <a href="briefings.html" class="mobile-dropdown-item">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html" class="mobile-dropdown-item">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html" class="mobile-dropdown-item">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html" class="mobile-dropdown-item">Geopolitical Briefs</a>
+                        <a href="gear-tools.html" class="mobile-dropdown-item">Gear + Tools</a>
+                    </div>
+                </div>
+                <button class="mobile-nav-link" onclick="window.location.href='the-watchlist.html'">THE WATCHLIST</button>
+                <button class="mobile-nav-link" onclick="window.location.href='about.html'">ABOUT THE BRIEF</button>
+                <button class="mobile-nav-link" onclick="window.location.href='join.html'">CONTACT</button>
+            </div>
+            <div class="nav-links desktop-nav">
+                <div class="dropdown">
+                    <a href="#" class="members-link">MEMBERS ONLY</a>
+                    <div class="dropdown-content">
+                        <a href="investigators.html">INVESTIGATORS</a>
+                        <a href="corporate-services.html">CORPORATE SERVICES</a>
+                        <a href="#" onclick="event.preventDefault();">OSINT TOOLKIT</a>
+                        <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="#" onclick="event.preventDefault();">TRAINING & CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a>SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="members-link">THE DOSSIER</a>
+                    <div class="dropdown-content">
+                        <a href="briefings.html">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html">Geopolitical Briefs</a>
+                        <a href="gear-tools.html">Gear + Tools</a>
+                    </div>
+                </div>
+                <a href="the-watchlist.html">THE WATCHLIST</a>
+                <a href="about.html">ABOUT THE BRIEF</a>
+                <a href="join.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="briefing-content">
+        <button onclick="window.location.href='case-studies.html'" class="back-button">←</button>
+        <article>
+            <h1>CASE STUDY #001 - Corporate Espionage: The Inside Job</h1>
+
+            <div class="briefing-text">
+                <p>A sophisticated corporate espionage operation that compromised a Fortune 500 technology company's intellectual property, resulting in the theft of proprietary algorithms worth an estimated $2.3 billion. This case study examines the methodology, tradecraft, and lessons learned from both the attacker and defender perspectives.</p>
+
+                <hr>
+
+                <h3>EXECUTIVE SUMMARY</h3>
+                
+                <p>In 2023, a state-sponsored cyber-espionage group successfully infiltrated TechCorp Industries, a leading artificial intelligence company, through a combination of social engineering, insider recruitment, and advanced persistent threat (APT) techniques. The operation lasted 18 months and resulted in the exfiltration of critical intellectual property related to machine learning algorithms and proprietary software architecture.</p>
+
+                <p>Key Players:</p>
+                <ul>
+                    <li>State-sponsored cyber group "ShadowNet"</li>
+                    <li>Insider asset: Senior Software Engineer</li>
+                    <li>TechCorp Industries security team</li>
+                    <li>Federal law enforcement agencies</li>
+                </ul>
+
+                <hr>
+
+                <h3>BACKGROUND</h3>
+                
+                <p>TechCorp Industries had developed breakthrough machine learning algorithms for autonomous vehicle systems, making them a prime target for industrial espionage. The company's security posture was considered robust, with multi-layered defenses including advanced threat detection, employee monitoring, and strict access controls.</p>
+
+                <p>The attack began when ShadowNet identified a potential insider asset through social media analysis and professional networking platforms. The target was a senior software engineer with access to critical systems and a history of expressing dissatisfaction with company policies.</p>
+
+                <hr>
+
+                <h3>METHODOLOGY</h3>
+                
+                <p>The operation employed a sophisticated multi-phase approach:</p>
+                
+                <ul>
+                    <li><strong>Reconnaissance Phase:</strong> Extensive OSINT gathering on target company, employees, and infrastructure</li>
+                    <li><strong>Recruitment Phase:</strong> Social engineering through fake job offers and professional networking</li>
+                    <li><strong>Infiltration Phase:</strong> Insider asset recruitment and credential harvesting</li>
+                    <li><strong>Exfiltration Phase:</strong> Staged data extraction over 6-month period</li>
+                    <li><strong>Cover-up Phase:</strong> Evidence destruction and false flag operations</li>
+                </ul>
+
+                <hr>
+
+                <h3>ANALYSIS</h3>
+                
+                <p>The operation's success can be attributed to several factors:</p>
+                
+                <ul>
+                    <li><strong>Insider Threat:</strong> The recruited insider provided legitimate access, bypassing most security measures</li>
+                    <li><strong>Social Engineering:</strong> Sophisticated psychological manipulation techniques</li>
+                    <li><strong>Operational Security:</strong> Meticulous tradecraft that avoided detection for 18 months</li>
+                    <li><strong>Technical Sophistication:</strong> Advanced malware and exfiltration techniques</li>
+                </ul>
+
+                <p>Defensive failures included:</p>
+                <ul>
+                    <li>Insufficient insider threat monitoring</li>
+                    <li>Over-reliance on technical controls</li>
+                    <li>Lack of behavioral analysis</li>
+                    <li>Inadequate employee security training</li>
+                </ul>
+
+                <hr>
+
+                <h3>LESSONS LEARNED</h3>
+                
+                <p>This case study reveals critical insights for both offensive and defensive operations:</p>
+                
+                <ul>
+                    <li><strong>Insider Threats:</strong> The most dangerous threats often come from within</li>
+                    <li><strong>Social Engineering:</strong> Human psychology remains the weakest link</li>
+                    <li><strong>Operational Security:</strong> Meticulous tradecraft can defeat even advanced defenses</li>
+                    <li><strong>Defense in Depth:</strong> Multiple layers of security are essential</li>
+                    <li><strong>Behavioral Monitoring:</strong> Technical controls alone are insufficient</li>
+                </ul>
+
+                <hr>
+
+                <h3>APPLICATIONS</h3>
+                
+                <p>These lessons can be applied to:</p>
+                
+                <ul>
+                    <li>Corporate security program development</li>
+                    <li>Insider threat detection and prevention</li>
+                    <li>Social engineering countermeasures</li>
+                    <li>Advanced persistent threat defense</li>
+                    <li>Intelligence collection operations</li>
+                </ul>
+
+                <hr>
+
+                <p>This case study demonstrates that even the most sophisticated technical defenses can be defeated through human manipulation and insider recruitment. The key takeaway is that comprehensive security requires equal attention to technical controls, human factors, and behavioral monitoring.</p>
+                — GREY CELL BRIEF // LEVEL ONE ACCESS —
+▍OBSERVER MODE ENDS HERE
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-brand"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:24px;vertical-align:middle;margin-right:8px;display:inline-block;"> THE GREY CELL BRIEF</div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy & Terms of Use</a>
+                </div>
+                <div class="footer-copyright">
+                    <span>&copy; 2025 The Grey Cell<br>Brief. All rights reserved.</span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/greycellbrief" aria-label="Twitter" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/greycellbrief" aria-label="Instagram" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleMobileDropdown(type) {
+            const dropdownContent = document.getElementById(`${type}-dropdown`);
+            const toggleButton = document.querySelector(`.mobile-dropdown-toggle[onclick*="${type}"]`);
+            dropdownContent.classList.toggle('open');
+            toggleButton.classList.toggle('open');
+        }
+    </script>
+</body>
+</html> 

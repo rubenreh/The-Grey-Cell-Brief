@@ -1,0 +1,18 @@
+{
+  "strategies": [
+    {
+      "title": "STRATEGY #001 - Multi-Phase Intelligence Operations",
+      "description": "A comprehensive framework for planning and executing complex intelligence operations across multiple phases. This strategy covers reconnaissance, infiltration, collection, exfiltration, and operational security considerations.",
+      "date": "January 20, 2025",
+      "category": "Strategic Planning",
+      "filename": "strategy-001.html"
+    },
+    {
+      "title": "STRATEGY #002 - The Operator's Loop: Strategy that Breathes",
+      "description": "A dynamic, repeatable loop designed for real-time decision-making, adaptation, and situational dominance in uncertain, high-friction environments. This strategy replaces rigid planning with a living operational rhythm that adjusts continuously to threat, terrain, and timing.",
+      "date": "July 29, 2025",
+      "category": "Strategic Planning",
+      "filename": "strategy-002.html"
+    }
+  ]
+}

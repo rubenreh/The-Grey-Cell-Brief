@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Dossier</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:38px;vertical-align:middle;margin-right:12px;display:inline-block;"> <a href="index.html" style="display:inline-block;vertical-align:middle;">THE GREY CELL BRIEF</a></div>
+            <button class="hamburger" aria-label="Open navigation menu" id="hamburgerBtn" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('members')">MEMBERS ONLY</button>
+                    <div class="mobile-dropdown-content" id="members-dropdown">
+                        <a href="investigators.html" class="mobile-dropdown-item">INVESTIGATORS</a>
+                        <a href="corporate-services.html" class="mobile-dropdown-item">CORPORATE SERVICES</a>
+                        <a href="#" onclick="event.preventDefault();" class="mobile-dropdown-item">OSINT TOOLKIT</a>
+                        <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="training-certification.html" class="mobile-dropdown-item">TRAINING <a href="#" onclick="event.preventDefault();" class="mobile-dropdown-item">TRAINING & CERTIFICATION</a> CERTIFICATION</a> CERTI CERTIFICATION</a> CERTIFICATION</a>FICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html" class="mobile-dropdown-item">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a class="mobile-dropdown-item">SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('dossier')">THE DOSSIER</button>
+                    <div class="mobile-dropdown-content" id="dossier-dropdown">
+                        <a href="briefings.html" class="mobile-dropdown-item">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html" class="mobile-dropdown-item">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html" class="mobile-dropdown-item">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html" class="mobile-dropdown-item">Geopolitical Briefs</a>
+                        <a class="mobile-dropdown-item">Gear + Tools</a>
+                    </div>
+                </div>
+                <button class="mobile-nav-link" onclick="window.location.href='the-watchlist.html'">THE WATCHLIST</button>
+                <button class="mobile-nav-link" onclick="window.location.href='about.html'">ABOUT THE BRIEF</button>
+                <button class="mobile-nav-link" onclick="window.location.href='join.html'">CONTACT</button>
+            </div>
+            <div class="nav-links desktop-nav">
+                <div class="dropdown">
+                    <a href="#" class="members-link">MEMBERS ONLY</a>
+                    <div class="dropdown-content">
+                        <a href="investigators.html">INVESTIGATORS</a>
+                        <a href="corporate-services.html">CORPORATE SERVICES</a>
+                        <a href="#" onclick="event.preventDefault();">OSINT TOOLKIT</a>
+                        <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="training-certification.html">TRAINING <a href="#" onclick="event.preventDefault();">TRAINING & CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a> CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a>SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="members-link">THE DOSSIER</a>
+                    <div class="dropdown-content">
+                        <a href="briefings.html">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html">Geopolitical Briefs</a>
+                        <a>Gear + Tools</a>
+                    </div>
+                </div>
+                <a href="the-watchlist.html">THE WATCHLIST</a>
+                <a href="about.html">ABOUT THE BRIEF</a>
+                <a href="join.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="briefing-content">
+        <button onclick="window.location.href='index.html#briefings'" class="back-button">←</button>
+        <article>
+            <h1>Field Note #001 – Surveillance Principles for Civilians</h1>
+            <div class="briefing-meta">
+                <p>Published on August 15, 2024</p>
+            </div>
+
+            <div class="briefing-image">
+                <img src="https://via.placeholder.com/1200x600/2a2a2a/ffffff" alt="Surveillance Principles Illustration">
+            </div>
+
+            <div class="briefing-text">
+                <p>In an era where personal security and situational awareness are paramount, understanding basic surveillance principles has become increasingly relevant for civilians. This comprehensive guide explores fundamental surveillance concepts and their practical applications in everyday scenarios.</p>
+
+                <h2>Understanding the Basics</h2>
+                <p>Surveillance, in its most basic form, is the systematic observation of an area, person, or activity. For civilians, this knowledge serves not to conduct surveillance but to enhance personal security and awareness. Key principles include:</p>
+                <ul>
+                    <li>Environmental awareness</li>
+                    <li>Pattern recognition</li>
+                    <li>Behavioral analysis</li>
+                    <li>Documentation techniques</li>
+                </ul>
+
+                <h2>Practical Applications</h2>
+                <p>These principles can be applied in various everyday situations:</p>
+                <ul>
+                    <li>Personal security during travel</li>
+                    <li>Home and workplace safety</li>
+                    <li>Digital security measures</li>
+                    <li>Asset protection strategies</li>
+                </ul>
+
+                <h2>Legal and Ethical Considerations</h2>
+                <p>Understanding surveillance principles comes with responsibility. This section covers:</p>
+                <ul>
+                    <li>Privacy laws and regulations</li>
+                    <li>Ethical guidelines</li>
+                    <li>Documentation requirements</li>
+                    <li>Professional boundaries</li>
+                </ul>
+
+                <div class="briefing-conclusion">
+                    <p>This field note provides a foundation for understanding surveillance principles from a civilian perspective. The knowledge shared here should be applied within legal and ethical boundaries, focusing on personal security and awareness rather than investigative purposes.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">© 2025 The Grey Cell Brief. All rights reserved.</a>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function toggleMobileDropdown(type) {
+            const dropdownContent = document.getElementById(`${type}-dropdown`);
+            const toggleButton = document.querySelector(`.mobile-dropdown-toggle[onclick*="${type}"]`);
+            dropdownContent.classList.toggle('open');
+            toggleButton.classList.toggle('open');
+        }
+    </script>
+</body>
+</html> 

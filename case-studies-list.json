@@ -1,0 +1,18 @@
+{
+  "caseStudies": [
+    {
+      "title": "CASE STUDY #002 – The Israeli Mossad Dubai Hit",
+      "description": "An in-depth breakdown of the 2010 Mossad operation in Dubai, which resulted in the assassination of Hamas operative Mahmoud al-Mabhouh. Covers surveillance footage analysis, passport cloning, team coordination, and international response.",
+      "date": "2025/08/28",
+      "category": "Covert Operations",
+      "filename": "case-study-002.html"
+    },
+    {
+      "title": "CASE STUDY #001 - Corporate Espionage: The Inside Job",
+      "description": "A detailed analysis of a sophisticated corporate espionage operation that compromised a Fortune 500 company's intellectual property. This case study examines the methodology, tradecraft, and lessons learned from both the attacker and defender perspectives.",
+      "date": "January 15, 2025",
+      "category": "Corporate Intelligence",
+      "filename": "case-study-001.html"
+    }
+  ]
+}
