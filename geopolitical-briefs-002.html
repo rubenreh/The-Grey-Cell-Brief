@@ -132,57 +132,11 @@
     <script src="script.js"></script>
     <script>
         function toggleMobileDropdown(type) {
-            const dropdownContent = document.getElementById(${type}-dropdown);
-            const toggleButton = document.querySelector(.mobile-dropdown-toggle[onclick*="${type}"]);
+            const dropdownContent = document.getElementById(`${type}-dropdown`);
+            const toggleButton = document.querySelector(`.mobile-dropdown-toggle[onclick*="${type}"]`);
             dropdownContent.classList.toggle('open');
             toggleButton.classList.toggle('open');
         }
-
-        // Load briefs
-        async function loadBriefs() {
-            try {
-                console.log('Attempting to load briefs...');
-                const response = await fetch('geopolitical-briefs-list.json');
-                console.log('Response status:', response.status);
-                
-                if (!response.ok) {
-                    throw new Error(HTTP error! status: ${response.status});
-                }
-                
-                const data = await response.json();
-                console.log('Loaded briefs data:', data);
-                
-                const grid = document.getElementById('briefsGrid');
-                
-                // Clear existing content
-                grid.innerHTML = '';
-                
-                if (data.briefs && data.briefs.length > 0) {
-                    data.briefs.forEach(brief => {
-                        const card = document.createElement('a');
-                        card.href = brief.filename + '?source=geopolitical-briefs';
-                        card.className = 'briefing-card';
-                        
-                        card.innerHTML = 
-                            <h3>${brief.title}</h3>
-                            <div class="arrow">→</div>
-                        ;
-                        
-                        grid.appendChild(card);
-                    });
-                    
-                    console.log('Successfully loaded', data.briefs.length, 'briefs');
-                } else {
-                    grid.innerHTML = '<p style="color: white; text-align: center; padding: 2rem;">No briefs available.</p>';
-                }
-            } catch (error) {
-                console.error('Error loading briefs:', error);
-                document.getElementById('briefsGrid').innerHTML = '<p style="color: white; text-align: center; padding: 2rem;">Error loading briefs. Please try again later.<br><br>Error details: ' + error.message + '</p>';
-            }
-        }
-
-        // Load briefs when the page loads
-        document.addEventListener('DOMContentLoaded', loadBriefs);
     </script>
 </body>
-</html> 
+</html>
