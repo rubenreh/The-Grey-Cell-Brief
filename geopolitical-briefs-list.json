@@ -8,4 +8,11 @@
       "filename": "brief-001.html"
     }
   ]
-} 
+} {
+  "briefs": [
+    {
+      "title": "BRIEF #002 - THE STRAIT TIGHTENS: ENERGY CHOKEPOINTS AND GEOPOLITICAL PRESSURE",
+      "description": "An analysis of how traditional geopolitical rivalries have evolved into sophisticated cyber warfare and digital espionage campaigns. This brief examines the changing nature of intelligence operations in the digital age.",
+      "date": "January 25, 2025",
+      "category": "Cyber Warfare",
+      "filename": "brief-002.html"
