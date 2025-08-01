@@ -12,50 +12,34 @@
       rel="stylesheet"
     />
     <style>
-        .briefing-card {
+        .page-title h1, .briefing-content h1 {
+            margin-top: 4.5rem;
+            margin-bottom: 2.2rem;
+            font-size: 2.7rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: #fff;
+            text-shadow: none;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        
+        .back-button {
+            background: linear-gradient(135deg, #ec4899, #f472b6);
+        }
+        
+        .back-button:hover {
+            background: linear-gradient(135deg, #f472b6, #f9a8d4);
+        }
+        
+        .briefing-text h3 {
+            color: #ec4899;
             border-left: 4px solid #ec4899;
-            transition: all 0.3s ease;
+            padding-left: 1rem;
         }
-        .briefing-card:hover {
-            border-left-color: #f472b6;
-            transform: translateX(5px);
-        }
-        .briefing-card h3 {
-            color: #ec4899;
-        }
-        .briefing-card:hover h3 {
-            color: #f472b6;
-        }
-        /* Additional styles for brief content */
-        .brief-content {
-            background: #1e1e2f;
-            color: #e0e0e0;
-            padding: 2rem;
-            max-width: 900px;
-            margin: 2rem auto 4rem auto;
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            border-left: 6px solid #ec4899;
-            box-shadow: 0 0 15px rgba(236, 72, 153, 0.3);
-            border-radius: 4px;
-        }
-        .brief-content h2 {
-            color: #ec4899;
-            margin-top: 0;
-        }
-        .brief-content h3 {
-            color: #f472b6;
-            margin-top: 1.5rem;
-        }
-        .brief-content p, .brief-content ul {
-            margin-top: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .brief-content ul {
-            padding-left: 1.4rem;
-        }
-        .brief-content ul li {
-            margin-bottom: 0.5rem;
+        
+        .briefing-text hr {
+            border-color: #ec4899;
         }
     </style>
 </head>
@@ -168,18 +152,15 @@
         </nav>
     </header>
 
-    <main class="page-content">
-        <div class="page-title">
-            <h1>GEOPOLITICAL BRIEFS</h1>
-        </div>
-        <div class="content-area dossier-container">
-            <article class="brief-content">
-                <h2>BRIEF #002 - THE STRAIT TIGHTENS: ENERGY CHOKEPOINTS AND GEOPOLITICAL PRESSURE</h2>
-                <p>
-                    The Strait of Hormuz, long viewed as a strategic flashpoint, is once again the center of global tension.
-                    As military posturing intensifies and sanctions tighten, this brief examines the strategic leverage of chokepoints
-                    in the global energy and trade infrastructure, and the implications for geopolitical stability and intelligence operations.
-                </p>
+    <main class="briefing-content">
+        <button onclick="window.location.href='geopolitical-briefs.html'" class="back-button">←</button>
+        <article>
+            <h1>BRIEF #002 - The Strait Tightens: Energy Chokepoints and Geopolitical Pressure</h1>
+
+            <div class="briefing-text">
+                <p>The Strait of Hormuz, long viewed as a strategic flashpoint, is once again the center of global tension. As military posturing intensifies and sanctions tighten, this brief examines the strategic leverage of chokepoints in the global energy and trade infrastructure, and the implications for geopolitical stability and intelligence operations.</p>
+
+                <hr>
                 <h3>EXECUTIVE SUMMARY</h3>
                 <p>
                     In mid-2025, Iran publicly signaled intent to potentially close the Strait of Hormuz, a narrow maritime corridor
@@ -266,8 +247,8 @@
                     Success in this terrain depends on anticipating pressure points, hardening logistical networks,
                     and interpreting strategic intent beneath economic moves.
                 </p>
-            </article>
-        </div>
+            </div>
+        </article>
     </main>
 
     <footer>
@@ -329,9 +310,9 @@
     <script src="script.js"></script>
     <script>
         function toggleMobileDropdown(type) {
-            const dropdownContent = document.getElementById(\`\${type}-dropdown\`);
+            const dropdownContent = document.getElementById(type + '-dropdown');
             const toggleButton = document.querySelector(
-                \`.mobile-dropdown-toggle[onclick*="\${type}"]\`
+                '.mobile-dropdown-toggle[onclick*="' + type + '"]'
             );
             dropdownContent.classList.toggle("open");
             toggleButton.classList.toggle("open");
