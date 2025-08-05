@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRIEF #012 - The Grey Cell Brief</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">THE GREY CELL BRIEF</a></div>
+            <button class="hamburger" aria-label="Open navigation menu" id="hamburgerBtn" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-nav" id="mobileNav">
+                <button class="mobile-nav-link" onclick="window.location.href='pis.html'">MEMBERS ONLY</button>
+                <button class="mobile-nav-link" onclick="window.location.href='briefings.html'">BRIEFINGS</button>
+                <button class="mobile-nav-link" onclick="window.location.href='weekly-signal.html'">WEEKLY SIGNAL</button>
+                <button class="mobile-nav-link" onclick="window.location.href='about.html'">ABOUT THE BRIEF</button>
+                <button class="mobile-nav-link" onclick="window.location.href='join.html'">CONTACT</button>
+            </div>
+            <div class="nav-links desktop-nav">
+                <div class="dropdown">
+                    <a href="#" class="members-link">MEMBERS ONLY</a>
+                    <div class="dropdown-content">
+                        <a href="pis.html">P.I.s</a>
+                        <a href="corporate.html">CORPORATE</a>
+                    </div>
+                </div>
+                <a href="briefings.html">BRIEFINGS</a>
+                <a href="weekly-signal.html">WEEKLY SIGNAL</a>
+                <a href="about.html">ABOUT THE BRIEF</a>
+                <a href="join.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="briefing-content">
+        <button onclick="window.location.href='index.html#briefings'" class="back-button">←</button>
+        <article>
+            <h1>BRIEF #012</h1>
+
+            <div class="briefing-text">
+                <h2>They look innocent, but they're tracking you: The household surveillance grid</h2>
+                <p>Your home is no longer private. Everyday devices once considered helpful or harmless are quietly becoming nodes in a decentralized surveillance network. From smart TVs to robot vacuums, these tools are collecting, transmitting, and in some cases selling your behavioral data. This brief dissects the modern “domestic dragnet” and offers tactical awareness for maintaining personal security in a world where privacy has become a myth.</p>
+                <hr>
+
+                <h3>THE DOMESTIC DRAGNET: TOOLS OF INVISIBLE SURVEILLANCE</h3>
+
+                <h4>Smart TVs</h4>
+                <p><strong>What they do:</strong></p>
+                <ul>
+                    <li>Monitor viewing habits, button presses, and screen time</li>
+                    <li>Use microphones and cameras for voice/gesture controls</li>
+                    <li>Share data with third-party advertisers or analytics firms</li>
+                </ul>
+                <p><strong>Tactical concern:</strong><br>Many models track even when "off." Default settings are configured to maximize data collection, not your privacy.</p>
+                <p><strong>Mitigation:</strong></p>
+                <ul>
+                    <li>Disable ACR (Automatic Content Recognition)</li>
+                    <li>Block internet access via router settings unless needed</li>
+                    <li>Cover or disable built-in cameras</li>
+                </ul>
+                <hr>
+
+                <h4>Wi-Fi Routers / Modems</h4>
+                <p><strong>What they do:</strong></p>
+                <ul>
+                    <li>Log all device connections, bandwidth usage, and activity timestamps</li>
+                    <li>Many default to “cloud managed” systems with remote analytics</li>
+                    <li>Some ISPs sell anonymized user behavior to third parties</li>
+                </ul>
+                <p><strong>Tactical concern:</strong><br>The router sees everything. If compromised, it becomes the central intelligence node of your network.</p>
+                <p><strong>Mitigation:</strong></p>
+                <ul>
+                    <li>Use open-source firmware (e.g., DD-WRT) where possible</li>
+                    <li>Change default login credentials</li>
+                    <li>Segment networks (IoT vs. personal devices)</li>
+                </ul>
+                <hr>
+
+                <h4>Voice Assistants (Alexa, Siri, Google Home)</h4>
+                <p><strong>What they do:</strong></p>
+                <ul>
+                    <li>Listen for “wake words,” but often record before and after</li>
+                    <li>Store recordings in the cloud, tagged with timestamps and locations</li>
+                    <li>Use NLP (Natural Language Processing) to analyze behavioral trends</li>
+                </ul>
+                <p><strong>Tactical concern:</strong><br>These aren’t just listeners, they’re training AI systems with your private moments.</p>
+                <p><strong>Mitigation:</strong></p>
+                <ul>
+                    <li>Mute physical microphones</li>
+                    <li>Regularly delete voice history</li>
+                    <li>Keep voice assistants off in bedrooms, workspaces</li>
+                </ul>
+                <hr>
+
+                <h4>Robot Vacuums (Roomba, etc.)</h4>
+                <p><strong>What they do:</strong></p>
+                <ul>
+                    <li>Use lidar or visual mapping to create floor plans</li>
+                    <li>Identify high traffic areas, object types, and movement patterns</li>
+                    <li>Some models upload maps to the cloud for AI training or sales</li>
+                </ul>
+                <p><strong>Tactical concern:</strong><br>You’re literally sending blueprints of your home to third parties, possibly across borders.</p>
+                <p><strong>Mitigation:</strong></p>
+                <ul>
+                    <li>Choose offline models</li>
+                    <li>Avoid connecting to app/cloud features</li>
+                    <li>Block internet access via router</li>
+                </ul>
+                <hr>
+
+                <h4>Smart Appliances (Fridges, Ovens, Thermostats)</h4>
+                <p><strong>What they do:</strong></p>
+                <ul>
+                    <li>Track usage patterns, energy habits, inventory data</li>
+                    <li>Connect to cloud servers for updates and analytics</li>
+                    <li>Share data with manufacturers for R&D or partner services</li>
+                </ul>
+                <p><strong>Tactical concern:</strong><br>Low-signal devices = low suspicion. But your fridge might know when you're home, how often you eat, and what your routines are.</p>
+                <p><strong>Mitigation:</strong></p>
+                <ul>
+                    <li>Avoid “smart” versions unless functionally essential</li>
+                    <li>Disable remote features via app settings</li>
+                    <li>Use separate network (IoT firewall)</li>
+                </ul>
+                <hr>
+
+                <h4>Game Consoles</h4>
+                <p><strong>What they do:</strong></p>
+                <ul>
+                    <li>Track gameplay, app usage, voice chats, connected devices</li>
+                    <li>Some use cameras or always-on mics (e.g., Xbox Kinect)</li>
+                    <li>Sync with cloud services and social platforms</li>
+                </ul>
+                <p><strong>Tactical concern:</strong><br>Your leisure time = behavioral goldmine. Especially for profiling teens and young adults.</p>
+                <p><strong>Mitigation:</strong></p>
+                <ul>
+                    <li>Limit permissions in system settings</li>
+                    <li>Disable background app activity</li>
+                    <li>Cover built-in cameras</li>
+                </ul>
+                <hr>
+
+                <h3>CONCLUSION: YOUR HOUSE IS THE SENSOR</h3>
+                <p>What once required wiretaps, warrants, and stakeouts can now be acquired passively through user agreements and firmware updates. Privacy isn’t being taken, it’s being willingly signed away.</p>
+
+                <h3>OPERATIONAL TAKEAWAY</h3>
+                <p>Think like an operator:</p>
+                <ul>
+                    <li>Audit every connected device quarterly</li>
+                    <li>Assume anything with a mic, cam, or network chip can be weaponized</li>
+                    <li>Segment, firewall, and isolate devices as if they’re compromised, because one day, they might be.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-brand">THE GREY CELL BRIEF</div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy & Terms of Use</a>
+                </div>
+                <div class="footer-copyright">
+                    <span>&copy; 2025 The Grey Cell<br>Brief. All rights reserved.</span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/greycellbrief" aria-label="Twitter" target="_blank"></a>
+                <a href="https://instagram.com/greycellbrief" aria-label="Instagram" target="_blank"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
