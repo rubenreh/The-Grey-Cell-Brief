@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>The Grey Cell Brief</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <style>
+.page-title h1, .briefing-content h1 {
+    margin-top: 4.5rem;
+    margin-bottom: 2.2rem;
+    font-size: 2.7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: none;
+    text-transform: uppercase;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:38px;vertical-align:middle;margin-right:12px;display:inline-block;" /> <a href="index.html" style="display:inline-block;vertical-align:middle;">THE GREY CELL BRIEF</a></div>
+            <button class="hamburger" aria-label="Open navigation menu" id="hamburgerBtn" onclick="toggleMobileNav()">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="mobile-nav" id="mobileNav">
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('members')">MEMBERS ONLY</button>
+                    <div class="mobile-dropdown-content" id="members-dropdown">
+                        <a href="investigators.html" class="mobile-dropdown-item">INVESTIGATORS</a>
+                        <a href="corporate-services.html" class="mobile-dropdown-item">CORPORATE SERVICES</a>
+                        <a href="osint-toolkit.html" class="mobile-dropdown-item">OSINT TOOLKIT</a>
+                        <a href="training-certification.html" class="mobile-dropdown-item">TRAINING & CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html" class="mobile-dropdown-item">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a class="mobile-dropdown-item">SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="mobile-dropdown">
+                    <button class="mobile-nav-link mobile-dropdown-toggle" onclick="toggleMobileDropdown('dossier')">THE DOSSIER</button>
+                    <div class="mobile-dropdown-content" id="dossier-dropdown">
+                        <a href="briefings.html" class="mobile-dropdown-item">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html" class="mobile-dropdown-item">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html" class="mobile-dropdown-item">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html" class="mobile-dropdown-item">Geopolitical Briefs</a>
+                        <a class="mobile-dropdown-item">Gear + Tools</a>
+                    </div>
+                </div>
+                <button class="mobile-nav-link" onclick="window.location.href='the-watchlist.html'">THE WATCHLIST</button>
+                <button class="mobile-nav-link" onclick="window.location.href='about.html'">ABOUT THE BRIEF</button>
+                <button class="mobile-nav-link" onclick="window.location.href='join.html'">CONTACT</button>
+            </div>
+            <div class="nav-links desktop-nav">
+                <div class="dropdown">
+                    <a href="#" class="members-link">MEMBERS ONLY</a>
+                    <div class="dropdown-content">
+                        <a href="investigators.html">INVESTIGATORS</a>
+                        <a href="corporate-services.html">CORPORATE SERVICES</a>
+                        <a href="osint-toolkit.html">OSINT TOOLKIT</a>
+                        <a href="training-certification.html">TRAINING & CERTIFICATION</a>
+                        <a href="Access-Intelligence-Dispatch.html">ACCESS INTELLIGENCE DISPATCH</a>
+                        <a>SHOP (COMING SOON)</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="members-link">THE DOSSIER</a>
+                    <div class="dropdown-content">
+                        <a href="briefings.html">Tradecraft + Field Tactics</a>
+                        <a href="case-studies.html">Case Studies + Analysis</a>
+                        <a href="operational-strategy.html">Operational Strategy</a>
+                        <a href="geopolitical-briefs.html">Geopolitical Briefs</a>
+                        <a>Gear + Tools</a>
+                    </div>
+                </div>
+                <a href="the-watchlist.html">THE WATCHLIST</a>
+                <a href="about.html">ABOUT THE BRIEF</a>
+                <a href="join.html">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+    <main class="briefing-content">
+        <button onclick="window.location.href='the-watchlist.html'" class="back-button">←</button>
+        <article>
+            <h1 style="color:#4a8a5a">IMMIGRATION SECURITY SCREENING DELAYS RISE: CSIS REPORT</h1>
+            <div class="briefing-text">
+                <h2>Overview of CSIS Security Screening Backlog</h2>
+                <p>OTTAWA (August 6, 2025) – The Canadian Security Intelligence Service (CSIS) has reported a significant increase in immigration security screening requests, leading to growing delays that are impacting applicants across Canada.</p>
+                <p>In its 2024 annual report, CSIS revealed it received over 538,000 screening requests from immigration and border officials, up from 493,200 in 2023 and roughly 300,000 annually over the prior five years. Despite the high volume, CSIS states it will "take the time required" to thoroughly complete each screening.</p>
+                <hr>
+                <h3>1. Personal Stories of Delay</h3>
+                <p>Ali Abuhannoud, a Jordanian refugee applying for Canadian citizenship, has been waiting for his security screening result since May 2024, after applying in July 2023. This marks his third screening since arriving in Canada in 2018. Abuhannoud expressed significant stress and anxiety over the prolonged process, highlighting the emotional toll these delays cause.</p>
+                <hr>
+                <h3>2. Factors Driving Increased Screenings</h3>
+                <p>The surge is partly attributed to increased asylum seekers, all of whom require security screening. CSIS, Immigration, Refugees and Citizenship Canada, and the Canada Border Services Agency are jointly reviewing the screening process, especially after security screenings missed potential threats, such as the father and son charged with terrorism linked to ISIS in 2024.</p>
+                <hr>
+                <h3>3. Legal and Community Concerns</h3>
+                <p>Immigration lawyers across British Columbia and Ontario report rising client frustrations with unexplained delays. Adrienne Smith, a Toronto-based lawyer, notes a lack of government transparency regarding actions taken to justify these delays. Will Tao, a Burnaby immigration lawyer, points to geopolitical concerns disproportionately affecting applicants from Middle Eastern, Ukrainian, Russian, Chinese, Iranian, and Indian backgrounds.</p>
+                <hr>
+                <h3>4. CSIS Response and Prioritization</h3>
+                <p>CSIS spokesperson Magali Hébert emphasized that security screening is a critical national security function and that the agency is diligently processing the high volume of requests. The agency also prioritized applications from Gaza and Lebanon due to ongoing regional conflicts.</p>
+                <hr>
+                <h3>5. Outlook on Backlog Resolution</h3>
+                <p>Concerns remain that government intentions to reduce immigration numbers may limit motivation to clear the screening backlog. Applicants like Abuhannoud feel unfairly punished for circumstances beyond their control, highlighting the human impact behind the statistics.</p>
+                <p style="font-size: 0.85rem; color: #888; margin-top: 2rem;">Brief ID: #GCB-0806-WL-CSIS | Issued: August 6, 2025</p>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-brand"><img src="images/GreyCellLogo.png" alt="Grey Cell Logo" style="max-height:24px;vertical-align:middle;margin-right:8px;display:inline-block;" /> THE GREY CELL BRIEF</div>
+            </div>
+            <div class="footer-center">
+                <div class="footer-links">
+                    <a href="privacy.html">Privacy Policy & Terms of Use</a>
+                </div>
+                <div class="footer-copyright">
+                    <span>&copy; 2025 The Grey Cell<br />Brief. All rights reserved.</span>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://twitter.com/greycellbrief" aria-label="Twitter" target="_blank" rel="noopener noreferrer"></a>
+                <a href="https://instagram.com/greycellbrief" aria-label="Instagram" target="_blank" rel="noopener noreferrer"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function toggleMobileDropdown(type) {
+            const dropdownContent = document.getElementById(`${type}-dropdown`);
+            const toggleButton = document.querySelector(`.mobile-dropdown-toggle[onclick*="${type}"]`);
+            const isOpen = dropdownContent.classList.toggle('open');
+            toggleButton.classList.toggle('open');
+            toggleButton.setAttribute('aria-expanded', isOpen);
+        }
+    </script>
+</body>
+</html>
